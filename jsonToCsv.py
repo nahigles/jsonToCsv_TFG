@@ -153,13 +153,16 @@ for i in range(1,numEvents):
         print(f"HAGYDSBSUAYHDGBUASYGHDBIHDGY: {tipoPregunta}")
         dataFil = [splitText[0][-1], splitText[1][-1],1,  tiempoSolicitudDormir, timeStamp,7, tipoPregunta, preguntaCorrecta]
         tiempoSolicitudDormir = '-'
+        data.append(dataFil) # Anyado al final de la lista de datos
     # Si es Parada
-
+    elif tipoPregunta == 'Parada':
+        dataFil = [splitText[0][-1], splitText[1][-1],1,  timeStamp, 9.0,8, tipoPregunta, preguntaCorrecta]
+        data.append(dataFil) # Anyado al final de la lista de datos
     # Si es Ubicacion lo pongo sinmas
     # Siguiente fila que quiero anyadir
-    else:
+    elif tipoPregunta == 'Ubicacion':
         dataFil = [splitText[0][-1], splitText[1][-1],1,  timeStamp, 9.0,8, tipoPregunta, preguntaCorrecta]
-    data.append(dataFil) # Anyado al final de la lista de datos
+        data.append(dataFil) # Anyado al final de la lista de datos
     #print(f"Tiempo Solicitud dormir: {tiempoSolicitudDormir} y Tiempo sol parada: {tiempoSolicitudParada} ,Tipo: {infoEvent[0]}")
 
     tipoPregunta = '-'
