@@ -7,6 +7,7 @@ tiempoSolicitudParada = '-'
 tiempoSolicitudDormir = '-'
 timeStamp = ''
 writeSleep = False
+writeStop = False
 
 # Si tiempoSolicitudParada o tiempoSolicitudDormir es  - es que no hay pregunta
 
@@ -18,6 +19,7 @@ def MCEvent(i, e, info):
     tiempoSolicitudParada = info[2]
     tiempoSolicitudDormir = info[3]
     writeSleep = info[4]
+    writeStop = info[5]
 
     # tipoPregunta = '-'
     # preguntaCorrecta = '-'
@@ -43,12 +45,15 @@ def MCEvent(i, e, info):
     elif e == "Solicitud de parada":
         tipoPregunta = 'Parada'
         tiempoSolicitudParada = timeStamp
+        writeStop = False
 
     elif e == "Respuesta de parada SI":
          tipoPregunta = 'Parada'
+         writeStop = True
 
     elif e == "Respuesta de parada NO":
          tipoPregunta = 'Parada'
+         writeStop = True
 
     elif e == "Solicitud de dormir":
         tipoPregunta = 'Dormir'
@@ -86,7 +91,7 @@ def MCEvent(i, e, info):
     elif e == "Se incumplen las reglas":
         b = ''
 
-    return tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep
+    return tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop
 
 
 ruta =  "../Mision Colombia/"
@@ -133,13 +138,14 @@ for i in range(1,numEvents):
     timeStamp = splitT[1]
 
     eventName = list(datos_JSON[name][i]["Eventos"][0].keys())[0]
-    infoEvent = MCEvent(i,eventName, [tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep])
+    infoEvent = MCEvent(i,eventName, [tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop])
 
     tipoPregunta = infoEvent[0]
     preguntaCorrecta = infoEvent[1]
     tiempoSolicitudParada = infoEvent[2]
     tiempoSolicitudDormir = infoEvent[3]
     writeSleep = infoEvent[4]
+    writeStop = infoEvent[5]
 
 # Escribo si ell tiempoubi no esta en - y es ubi o so tiempo dormir no esta en - y es dormir (negando todo eso)
 # significa que no esta pendiente de dale a responder
@@ -155,19 +161,20 @@ for i in range(1,numEvents):
         tiempoSolicitudDormir = '-'
         data.append(dataFil) # Anyado al final de la lista de datos
     # Si es Parada
-    elif tipoPregunta == 'Parada':
-        dataFil = [splitText[0][-1], splitText[1][-1],1,  timeStamp, 9.0,8, tipoPregunta, preguntaCorrecta]
+    elif tipoPregunta == 'Parada' and tiempoSolicitudParada != '-' and writeStop:
+        dataFil = [splitText[0][-1], splitText[1][-1],1, tiempoSolicitudParada , timeStamp,8, tipoPregunta, preguntaCorrecta]
+        tiempoSolicitudParada = '-'
         data.append(dataFil) # Anyado al final de la lista de datos
     # Si es Ubicacion lo pongo sinmas
     # Siguiente fila que quiero anyadir
     elif tipoPregunta == 'Ubicacion':
-        dataFil = [splitText[0][-1], splitText[1][-1],1,  timeStamp, 9.0,8, tipoPregunta, preguntaCorrecta]
+        dataFil = [splitText[0][-1], splitText[1][-1],1,  timeStamp, '-',8, tipoPregunta, preguntaCorrecta]
         data.append(dataFil) # Anyado al final de la lista de datos
     #print(f"Tiempo Solicitud dormir: {tiempoSolicitudDormir} y Tiempo sol parada: {tiempoSolicitudParada} ,Tipo: {infoEvent[0]}")
 
     tipoPregunta = '-'
     preguntaCorrecta = '-'
-    tiempoSolicitudParada = '-'
+    #tiempoSolicitudParada = '-'
     #tiempoSolicitudDormir = '-'
     
     print(f"Iteración {i}")
