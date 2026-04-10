@@ -9,11 +9,12 @@ timeStamp = ''
 writeSleep = False
 writeStop = False
 
+numErrores = 0
+
 # Si tiempoSolicitudParada o tiempoSolicitudDormir es  - es que no hay pregunta
 
 def MCEvent(i, e, info): 
 
-# info = [tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir]
     tipoPregunta = info[0]
     preguntaCorrecta = info[1]
     tiempoSolicitudParada = info[2]
@@ -21,10 +22,7 @@ def MCEvent(i, e, info):
     writeSleep = info[4]
     writeStop = info[5]
 
-    # tipoPregunta = '-'
-    # preguntaCorrecta = '-'
-    # tiempoSolicitudParada = '-'
-    # tiempoSolicitudDormir = '-'
+    global numErrores
 
     if e == "Paciente y numero de sesion":
         a = ''
@@ -69,6 +67,7 @@ def MCEvent(i, e, info):
         tipoPregunta = 'Dormir'
         preguntaCorrecta = 'Erroneo'
         writeSleep = True
+        numErrores = numErrores + 1
 
     elif e == "Inicio de dormir":
         c = ''
@@ -82,9 +81,13 @@ def MCEvent(i, e, info):
     elif e == "Envio de ubicación omitido":
         tipoPregunta = 'Ubicacion'
         preguntaCorrecta = 'Erroneo'
+        numErrores = numErrores + 1
 
     elif e == "Tiempo de respuesta excedido":
         preguntaCorrecta = 'Erroneo'
+        numErrores = numErrores + 1
+        #tiempoSolicitudDormir = 'No respuesta'
+        #tiempoSolicitudParada = 'No respuesta'
 
     elif e == "Se cumplen las reglas":
         a = ''
@@ -92,6 +95,15 @@ def MCEvent(i, e, info):
         b = ''
 
     return tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop
+
+
+def calculateTime(t1,t2):
+    t1s = t1.split(':')
+    t2s = t2.split(':')
+    t =(float(t2s[1]) - float(t1s[1]))*60.0 + (float(t2s[2]) - float(t1s[2]))
+
+    t = round(t, 6)
+    return t
 
 
 ruta =  "../Mision Colombia/"
@@ -102,36 +114,30 @@ with open(ruta + name) as archivo:
 
 
 numEvents = len(datos_JSON[name]) # Numero de eventos del json
-print(len(datos_JSON[name]))
-print(datos_JSON[name][0]["Tiempo"])
 
 # ID del paciente y numero de sesion
 txt = datos_JSON[name][0]["Eventos"][0]["Paciente y numero de sesion"]
-print(datos_JSON[name][0]["Eventos"][0]["Paciente y numero de sesion"])
 
 splitText = txt.split(", ")
-print("P: " + splitText[0][-1])
-print("S: " + splitText[1][-1])
 
 # Fecha y Tiempo
-print(datos_JSON[name][0]["Tiempo"])
 txt = datos_JSON[name][0]["Tiempo"]
 splitT = txt.split(" ")
 date = splitT[0]
 timeStamp = splitT[1]
+level = datos_JSON[name][1]['Eventos'][0]["Iniciando juego"][-1]
 
 # Datos con los titulos de cada columna
 data = [['ID','Sesion', 'Nivel', 'Tiempo_Pregunta', 'Tiempo_Respuesta','Tiempo_Reaccion', 'Tipo_Pregunta','Respuesta']]
 
 # Siguiente fila que quiero anyadir
-dataFil = [splitText[0][-1], splitText[1][-1],1,  timeStamp, 9.0, '-','-','-']
-data.append(dataFil) # Anyado al final de la lista de datos
+#dataFil = [splitText[0][-1], splitText[1][-1],level,  timeStamp, 9.0, '-','-','-']
+#data.append(dataFil) # Anyado al final de la lista de datos
 
 
 
 # Voy anyadiendo siguientes filas
-for i in range(1,numEvents):
-    #print(datos_JSON[name][i]["Tiempo"])
+for i in range(2,numEvents):
     txt = datos_JSON[name][i]["Tiempo"]
     splitT = txt.split(" ")
     date = splitT[0]
@@ -146,39 +152,33 @@ for i in range(1,numEvents):
     tiempoSolicitudDormir = infoEvent[3]
     writeSleep = infoEvent[4]
     writeStop = infoEvent[5]
-
-# Escribo si ell tiempoubi no esta en - y es ubi o so tiempo dormir no esta en - y es dormir (negando todo eso)
-# significa que no esta pendiente de dale a responder
-    #if not((tiempoSolicitudDormir != '-' and tipoPregunta == 'Dormir') or (tiempoSolicitudParada  != '-' and tipoPregunta == 'Parada')):
-    
-    #Escribo dormir cuando el tipo sea dormir y tiempo solicitud dormir no sea -    
-       
+  
     # Si es Dormir 
     if tipoPregunta == 'Dormir' and tiempoSolicitudDormir != '-' and writeSleep:
-        print(f"Tiempo Solicitud dormir: {tiempoSolicitudDormir} y Tiempo sol parada: {tiempoSolicitudParada} ,Tipo: {infoEvent[0]}")  
-        print(f"HAGYDSBSUAYHDGBUASYGHDBIHDGY: {tipoPregunta}")
-        dataFil = [splitText[0][-1], splitText[1][-1],1,  tiempoSolicitudDormir, timeStamp,7, tipoPregunta, preguntaCorrecta]
+        reactionTime = calculateTime(tiempoSolicitudDormir, timeStamp)
+        dataFil = [splitText[0][-1], splitText[1][-1],level,  tiempoSolicitudDormir, timeStamp,reactionTime, tipoPregunta, preguntaCorrecta]
         tiempoSolicitudDormir = '-'
         data.append(dataFil) # Anyado al final de la lista de datos
+
     # Si es Parada
     elif tipoPregunta == 'Parada' and tiempoSolicitudParada != '-' and writeStop:
-        dataFil = [splitText[0][-1], splitText[1][-1],1, tiempoSolicitudParada , timeStamp,8, tipoPregunta, preguntaCorrecta]
+        reactionTime = calculateTime(tiempoSolicitudParada, timeStamp)
+        dataFil = [splitText[0][-1], splitText[1][-1],level, tiempoSolicitudParada , timeStamp,reactionTime, tipoPregunta, preguntaCorrecta]
         tiempoSolicitudParada = '-'
         data.append(dataFil) # Anyado al final de la lista de datos
+
     # Si es Ubicacion lo pongo sinmas
     # Siguiente fila que quiero anyadir
     elif tipoPregunta == 'Ubicacion':
-        dataFil = [splitText[0][-1], splitText[1][-1],1,  timeStamp, '-',8, tipoPregunta, preguntaCorrecta]
+        dataFil = [splitText[0][-1], splitText[1][-1],level,  timeStamp, '-','-', tipoPregunta, preguntaCorrecta]
         data.append(dataFil) # Anyado al final de la lista de datos
-    #print(f"Tiempo Solicitud dormir: {tiempoSolicitudDormir} y Tiempo sol parada: {tiempoSolicitudParada} ,Tipo: {infoEvent[0]}")
 
     tipoPregunta = '-'
     preguntaCorrecta = '-'
-    #tiempoSolicitudParada = '-'
-    #tiempoSolicitudDormir = '-'
     
-    print(f"Iteración {i}")
+    #print(f"Iteración {i}")
 
+print(f"Num errores: {numErrores}") # Esto por usuario
 
 # Abro archivo .csv para guardar los datos leidos
 file =  open('../datos.csv', 'w', newline='')
