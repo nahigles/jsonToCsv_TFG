@@ -68,6 +68,8 @@ def MCEvent(i, e, info):
         preguntaCorrecta = 'Erroneo'
         writeSleep = True
         numErrores = numErrores + 1
+        if numErrores > 0:
+            print(f"Error no dormir: {preguntaCorrecta} Tipo: {tipoPregunta}")
 
     elif e == "Inicio de dormir":
         c = ''
@@ -82,17 +84,29 @@ def MCEvent(i, e, info):
         tipoPregunta = 'Ubicacion'
         preguntaCorrecta = 'Erroneo'
         numErrores = numErrores + 1
+        if numErrores > 0:
+            print(f"Error ubi omitida: {preguntaCorrecta} Tipo: {tipoPregunta}")
 
     elif e == "Tiempo de respuesta excedido":
         preguntaCorrecta = 'Erroneo'
         numErrores = numErrores + 1
-        #tiempoSolicitudDormir = 'No respuesta'
-        #tiempoSolicitudParada = 'No respuesta'
+
+        if tiempoSolicitudDormir != '-':
+            tipoPregunta = 'Dormir'
+            writeSleep = True
+        elif tiempoSolicitudParada != '-':
+            tipoPregunta = 'Parada'
+            writeStop = True
+
+        if numErrores > 0:
+            print(f"Error tiempo excedido: {preguntaCorrecta} Tipo: {tipoPregunta}")
 
     elif e == "Se cumplen las reglas":
         a = ''
     elif e == "Se incumplen las reglas":
         b = ''
+
+
 
     return tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop
 
