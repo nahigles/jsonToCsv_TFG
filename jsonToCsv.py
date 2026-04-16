@@ -18,7 +18,7 @@ numUbicacionPlanificada = 0
 
 # Si tiempoSolicitudParada o tiempoSolicitudDormir es  - es que no hay pregunta
 
-def MCEvent(i, e, info): 
+def MCEvent(i, e, eValue, info): 
 
     tipoPregunta = info[0]
     preguntaCorrecta = info[1]
@@ -97,14 +97,6 @@ def MCEvent(i, e, info):
         numPasosEjecutados = numPasosEjecutados + 1
         numUbicacionPlanificada += 1
 
-    elif e == "Envio de ubicacion omitido":
-        tipoPregunta = 'Ubicacion'
-        preguntaCorrecta = 'Erroneo'
-        numErrores = numErrores + 1
-        numPasosPlanificados += 1
-        numUbicacionPlanificada += 1
-        print(f"Error ubi omitida: {preguntaCorrecta} Tipo: {tipoPregunta}")
-
     elif e == "Tiempo de respuesta excedido":
         preguntaCorrecta = 'Erroneo'
         numErrores = numErrores + 1
@@ -124,9 +116,14 @@ def MCEvent(i, e, info):
         a = ''
     elif e == "Se incumplen las reglas":
         b = ''
-
-    if tipoPregunta == 'Ubicacion':
-        print(e)
+    elif eValue == "Envio de ubicacion omitido":
+        tipoPregunta = 'Ubicacion'
+        preguntaCorrecta = 'Erroneo'
+        numErrores = numErrores + 1
+        numPasosPlanificados += 1
+        numUbicacionPlanificada += 1
+        print(f"Error ubi omitida: {preguntaCorrecta} Tipo: {tipoPregunta}")
+    
 
     return tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop, tiempoExcedido
 
@@ -178,7 +175,8 @@ for i in range(2,numEvents):
     timeStamp = splitT[1]
 
     eventName = list(datos_JSON[name][i]["Eventos"][0].keys())[0]
-    infoEvent = MCEvent(i,eventName, [tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop])
+    eventValue = list(datos_JSON[name][i]["Eventos"][0].values())[0]
+    infoEvent = MCEvent(i,eventName,eventValue, [tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop])
 
     tipoPregunta = infoEvent[0]
     preguntaCorrecta = infoEvent[1]
@@ -194,7 +192,6 @@ for i in range(2,numEvents):
             reactionTime = calculateTime(tiempoSolicitudDormir, timeStamp)
         else:
             reactionTime = 'Tiempo excedido'
-            #tiempoExcedido = False
 
         dataFil = [splitText[0][-1], splitText[1][-1],level,  tiempoSolicitudDormir, timeStamp,reactionTime, tipoPregunta, preguntaCorrecta]
         tiempoSolicitudDormir = '-'
@@ -206,7 +203,6 @@ for i in range(2,numEvents):
             reactionTime = calculateTime(tiempoSolicitudParada, timeStamp)
         else:
             reactionTime = 'Tiempo excedido'
-            #tiempoExcedido = False
 
         dataFil = [splitText[0][-1], splitText[1][-1],level, tiempoSolicitudParada , timeStamp,reactionTime, tipoPregunta, preguntaCorrecta]
         tiempoSolicitudParada = '-'
