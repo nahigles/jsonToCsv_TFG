@@ -15,6 +15,12 @@ numPasosPlanificados = 0
 numPasosEjecutados = 0
 numPreguntasDormir = 0
 numUbicacionPlanificada = 0
+numErroresUbicacion = 0
+numErroresDormir = 0
+numErroresParada = 0
+numTiempoExcedido = 0
+numParadasHechas = 0
+numParadasOmitidas = 0
 
 # Si tiempoSolicitudParada o tiempoSolicitudDormir es  - es que no hay pregunta
 
@@ -33,6 +39,12 @@ def MCEvent(i, e, eValue, info):
     global numPasosEjecutados
     global numPreguntasDormir
     global numUbicacionPlanificada
+    global numErroresUbicacion
+    global numErroresDormir
+    global numErroresParada
+    global numTiempoExcedido
+    global numParadasHechas
+    global numParadasOmitidas
 
 
     if e == "Paciente y numero de sesion":
@@ -59,10 +71,12 @@ def MCEvent(i, e, eValue, info):
     elif e == "Respuesta de parada SI":
          tipoPregunta = 'Parada'
          writeStop = True
+         numParadasHechas += 1
 
     elif e == "Respuesta de parada NO":
          tipoPregunta = 'Parada'
          writeStop = True
+         numParadasOmitidas += 1
 
     elif e == "Solicitud de dormir":
         tipoPregunta = 'Dormir'
@@ -82,6 +96,7 @@ def MCEvent(i, e, eValue, info):
         preguntaCorrecta = 'Erroneo'
         writeSleep = True
         numErrores = numErrores + 1
+        numErroresDormir += 1
         if numErrores > 0:
             print(f"Error no dormir: {preguntaCorrecta} Tipo: {tipoPregunta}")
 
@@ -100,17 +115,18 @@ def MCEvent(i, e, eValue, info):
     elif e == "Tiempo de respuesta excedido":
         preguntaCorrecta = 'Erroneo'
         numErrores = numErrores + 1
+        numTiempoExcedido += 1
 
         if tiempoSolicitudDormir != '-':
             tipoPregunta = 'Dormir'
             writeSleep = True
+            numErroresDormir += 1
         elif tiempoSolicitudParada != '-':
             tipoPregunta = 'Parada'
             writeStop = True
+            numErroresParada += 1
 
         tiempoExcedido = True
-        if numErrores > 0:
-            print(f"Error tiempo excedido: {preguntaCorrecta} Tipo: {tipoPregunta}")
 
     elif e == "Se cumplen las reglas":
         a = ''
@@ -122,7 +138,7 @@ def MCEvent(i, e, eValue, info):
         numErrores = numErrores + 1
         numPasosPlanificados += 1
         numUbicacionPlanificada += 1
-        print(f"Error ubi omitida: {preguntaCorrecta} Tipo: {tipoPregunta}")
+        numErroresUbicacion += 1
     
 
     return tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop, tiempoExcedido
@@ -219,7 +235,8 @@ for i in range(2,numEvents):
     
     #print(f"Iteración {i} Num pasos planificados: {numPasosPlanificados}")
 
-print(f"Num errores: {numErrores} \nNum pasos planificados: {numPasosPlanificados} \nNum pasos ejecutados: {numPasosEjecutados} \nNum dormir planificado: {numPreguntasDormir} \nNum ubicacion planificado: {numUbicacionPlanificada}") # Esto por usuario
+print(f"Num pasos planificados: {numPasosPlanificados} \nNum pasos ejecutados: {numPasosEjecutados} \nNum dormir planificado: {numPreguntasDormir} \nNum ubicacion planificado: {numUbicacionPlanificada} \nNum paradas hechas: {numParadasHechas}/{numParadasHechas + numParadasOmitidas}") # Esto por usuario
+print(f"\nNum errores: {numErrores} \nNum errores ubi: {numErroresUbicacion} \nNum errores dormir: {numErroresDormir} \nNum errores parada: {numErroresParada} \nError por tiempo excedido: {numTiempoExcedido}")
 
 # Abro archivo .csv para guardar los datos leidos
 file =  open('../datos.csv', 'w', newline='')
