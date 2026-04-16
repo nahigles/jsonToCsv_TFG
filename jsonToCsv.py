@@ -8,8 +8,13 @@ tiempoSolicitudDormir = '-'
 timeStamp = ''
 writeSleep = False
 writeStop = False
+tiempoExcedido = False
 
 numErrores = 0
+numPasosPlanificados = 0
+numPasosEjecutados = 0
+numPreguntasDormir = 0
+numUbicacionPlanificada = 0
 
 # Si tiempoSolicitudParada o tiempoSolicitudDormir es  - es que no hay pregunta
 
@@ -21,8 +26,14 @@ def MCEvent(i, e, info):
     tiempoSolicitudDormir = info[3]
     writeSleep = info[4]
     writeStop = info[5]
+    tiempoExcedido = False
 
     global numErrores
+    global numPasosPlanificados
+    global numPasosEjecutados
+    global numPreguntasDormir
+    global numUbicacionPlanificada
+
 
     if e == "Paciente y numero de sesion":
         a = ''
@@ -57,11 +68,14 @@ def MCEvent(i, e, info):
         tipoPregunta = 'Dormir'
         tiempoSolicitudDormir = timeStamp
         writeSleep = False
+        numPasosPlanificados += 1
+        numPreguntasDormir += 1
 
     elif e == "Respuesta de dormir SI":
         tipoPregunta = 'Dormir'
         preguntaCorrecta = 'Correcto'
         writeSleep = True
+        numPasosEjecutados = numPasosEjecutados + 1
 
     elif e == "Respuesta de dormir NO":
         tipoPregunta = 'Dormir'
@@ -79,13 +93,17 @@ def MCEvent(i, e, info):
     elif e == "Ubicacion bien enviada":
         tipoPregunta = 'Ubicacion'
         preguntaCorrecta = 'Correcto'
+        numPasosPlanificados += 1
+        numPasosEjecutados = numPasosEjecutados + 1
+        numUbicacionPlanificada += 1
 
-    elif e == "Envio de ubicación omitido":
+    elif e == "Envio de ubicacion omitido":
         tipoPregunta = 'Ubicacion'
         preguntaCorrecta = 'Erroneo'
         numErrores = numErrores + 1
-        if numErrores > 0:
-            print(f"Error ubi omitida: {preguntaCorrecta} Tipo: {tipoPregunta}")
+        numPasosPlanificados += 1
+        numUbicacionPlanificada += 1
+        print(f"Error ubi omitida: {preguntaCorrecta} Tipo: {tipoPregunta}")
 
     elif e == "Tiempo de respuesta excedido":
         preguntaCorrecta = 'Erroneo'
@@ -98,6 +116,7 @@ def MCEvent(i, e, info):
             tipoPregunta = 'Parada'
             writeStop = True
 
+        tiempoExcedido = True
         if numErrores > 0:
             print(f"Error tiempo excedido: {preguntaCorrecta} Tipo: {tipoPregunta}")
 
@@ -106,9 +125,10 @@ def MCEvent(i, e, info):
     elif e == "Se incumplen las reglas":
         b = ''
 
+    if tipoPregunta == 'Ubicacion':
+        print(e)
 
-
-    return tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop
+    return tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop, tiempoExcedido
 
 
 def calculateTime(t1,t2):
@@ -166,17 +186,28 @@ for i in range(2,numEvents):
     tiempoSolicitudDormir = infoEvent[3]
     writeSleep = infoEvent[4]
     writeStop = infoEvent[5]
-  
+    tiempoExcedido = infoEvent[6]
+
     # Si es Dormir 
     if tipoPregunta == 'Dormir' and tiempoSolicitudDormir != '-' and writeSleep:
-        reactionTime = calculateTime(tiempoSolicitudDormir, timeStamp)
+        if not tiempoExcedido:
+            reactionTime = calculateTime(tiempoSolicitudDormir, timeStamp)
+        else:
+            reactionTime = 'Tiempo excedido'
+            #tiempoExcedido = False
+
         dataFil = [splitText[0][-1], splitText[1][-1],level,  tiempoSolicitudDormir, timeStamp,reactionTime, tipoPregunta, preguntaCorrecta]
         tiempoSolicitudDormir = '-'
         data.append(dataFil) # Anyado al final de la lista de datos
 
     # Si es Parada
     elif tipoPregunta == 'Parada' and tiempoSolicitudParada != '-' and writeStop:
-        reactionTime = calculateTime(tiempoSolicitudParada, timeStamp)
+        if not tiempoExcedido:
+            reactionTime = calculateTime(tiempoSolicitudParada, timeStamp)
+        else:
+            reactionTime = 'Tiempo excedido'
+            #tiempoExcedido = False
+
         dataFil = [splitText[0][-1], splitText[1][-1],level, tiempoSolicitudParada , timeStamp,reactionTime, tipoPregunta, preguntaCorrecta]
         tiempoSolicitudParada = '-'
         data.append(dataFil) # Anyado al final de la lista de datos
@@ -190,9 +221,9 @@ for i in range(2,numEvents):
     tipoPregunta = '-'
     preguntaCorrecta = '-'
     
-    #print(f"Iteración {i}")
+    #print(f"Iteración {i} Num pasos planificados: {numPasosPlanificados}")
 
-print(f"Num errores: {numErrores}") # Esto por usuario
+print(f"Num errores: {numErrores} \nNum pasos planificados: {numPasosPlanificados} \nNum pasos ejecutados: {numPasosEjecutados} \nNum dormir planificado: {numPreguntasDormir} \nNum ubicacion planificado: {numUbicacionPlanificada}") # Esto por usuario
 
 # Abro archivo .csv para guardar los datos leidos
 file =  open('../datos.csv', 'w', newline='')
