@@ -9,6 +9,11 @@ timeStamp = ''
 writeSleep = False
 writeStop = False
 tiempoExcedido = False
+misionEmpezada = False
+tiempoInicioMision = '-'
+tiempoEventoAnt = '-'
+cambioNivel = False
+tiempoInicioNivel = '-'
 
 numErrores = 0
 numPasosPlanificados = 0
@@ -22,7 +27,9 @@ numTiempoExcedido = 0
 numParadasHechas = 0
 numParadasOmitidas = 0
 
-# Si tiempoSolicitudParada o tiempoSolicitudDormir es  - es que no hay pregunta
+tiemposMisiones = []
+tiemposNiveles = []
+
 
 def MCEvent(i, e, eValue, info): 
 
@@ -33,6 +40,10 @@ def MCEvent(i, e, eValue, info):
     writeSleep = info[4]
     writeStop = info[5]
     tiempoExcedido = False
+    misionEmpezada = info[6]
+    cambioNivel = info[7]
+    level = info[8]
+    levelPrev = info[9]
 
     global numErrores
     global numPasosPlanificados
@@ -51,7 +62,12 @@ def MCEvent(i, e, eValue, info):
         a = ''
 
     elif e == "Iniciando juego":
-        a = ''
+            misionEmpezada = not misionEmpezada
+            levelPrev = level
+            level = eValue[-1]
+            if (levelPrev != level):
+                cambioNivel = not cambioNivel
+
 
     elif e == "Empieza pregunta y decision":
         a = ''
@@ -97,8 +113,6 @@ def MCEvent(i, e, eValue, info):
         writeSleep = True
         numErrores = numErrores + 1
         numErroresDormir += 1
-        if numErrores > 0:
-            print(f"Error no dormir: {preguntaCorrecta} Tipo: {tipoPregunta}")
 
     elif e == "Inicio de dormir":
         c = ''
@@ -141,13 +155,13 @@ def MCEvent(i, e, eValue, info):
         numErroresUbicacion += 1
     
 
-    return tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop, tiempoExcedido
+    return tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop, tiempoExcedido, misionEmpezada, level, cambioNivel, levelPrev
 
 
 def calculateTime(t1,t2):
     t1s = t1.split(':')
     t2s = t2.split(':')
-    t =(float(t2s[1]) - float(t1s[1]))*60.0 + (float(t2s[2]) - float(t1s[2]))
+    t =(float(t2s[0]) - float(t1s[0]))*60*60 + (float(t2s[1]) - float(t1s[1]))*60.0 + (float(t2s[2]) - float(t1s[2]))
 
     t = round(t, 6)
     return t
@@ -164,27 +178,18 @@ numEvents = len(datos_JSON[name]) # Numero de eventos del json
 
 # ID del paciente y numero de sesion
 txt = datos_JSON[name][0]["Eventos"][0]["Paciente y numero de sesion"]
-
-splitText = txt.split(", ")
-
-# Fecha y Tiempo
-txt = datos_JSON[name][0]["Tiempo"]
-splitT = txt.split(" ")
-date = splitT[0]
-timeStamp = splitT[1]
-level = datos_JSON[name][1]['Eventos'][0]["Iniciando juego"][-1]
+idSesion = txt.split(", ")
 
 # Datos con los titulos de cada columna
 data = [['ID','Sesion', 'Nivel', 'Tiempo_Pregunta', 'Tiempo_Respuesta','Tiempo_Reaccion', 'Tipo_Pregunta','Respuesta']]
 
-# Siguiente fila que quiero anyadir
-#dataFil = [splitText[0][-1], splitText[1][-1],level,  timeStamp, 9.0, '-','-','-']
-#data.append(dataFil) # Anyado al final de la lista de datos
-
-
+level = -1
+levelPrev = -1
 
 # Voy anyadiendo siguientes filas
-for i in range(2,numEvents):
+for i in range(1,numEvents):
+
+    # Fecha y Tiempo
     txt = datos_JSON[name][i]["Tiempo"]
     splitT = txt.split(" ")
     date = splitT[0]
@@ -192,7 +197,7 @@ for i in range(2,numEvents):
 
     eventName = list(datos_JSON[name][i]["Eventos"][0].keys())[0]
     eventValue = list(datos_JSON[name][i]["Eventos"][0].values())[0]
-    infoEvent = MCEvent(i,eventName,eventValue, [tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop])
+    infoEvent = MCEvent(i,eventName,eventValue, [tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop, misionEmpezada, cambioNivel, level, levelPrev])
 
     tipoPregunta = infoEvent[0]
     preguntaCorrecta = infoEvent[1]
@@ -201,6 +206,38 @@ for i in range(2,numEvents):
     writeSleep = infoEvent[4]
     writeStop = infoEvent[5]
     tiempoExcedido = infoEvent[6]
+    misionEmpezada = infoEvent[7]
+    level = infoEvent[8]
+    cambioNivel = infoEvent[9]
+    levelPrev = infoEvent[10]
+
+    # Guarda tiempo inicio sesion  
+    if (not misionEmpezada) or (i == (numEvents-1)):
+        if(tiempoInicioMision != '-'):
+            if (i == (numEvents-1)):
+                tiempoEventoAnt = timeStamp
+
+            duration = calculateTime(tiempoInicioMision, tiempoEventoAnt)
+            tiemposMisiones.append(duration)
+            tiempoInicioMision = '-'
+            misionEmpezada = True
+    else:
+        if(tiempoInicioMision == '-'):
+            tiempoInicioMision = timeStamp
+
+    # Guarda tiempo nivel
+    if(not cambioNivel) or (i == (numEvents -1)):
+        if tiempoInicioNivel != '-':
+            if i == (numEvents - 1):
+                tiempoEventoAnt = timeStamp
+
+            duration = calculateTime(tiempoInicioNivel, tiempoEventoAnt)
+            tiemposNiveles.append([levelPrev,duration])
+            tiempoInicioNivel = '-'
+            cambioNivel = True
+    else:
+        if tiempoInicioNivel == '-':
+            tiempoInicioNivel = timeStamp
 
     # Si es Dormir 
     if tipoPregunta == 'Dormir' and tiempoSolicitudDormir != '-' and writeSleep:
@@ -209,7 +246,7 @@ for i in range(2,numEvents):
         else:
             reactionTime = 'Tiempo excedido'
 
-        dataFil = [splitText[0][-1], splitText[1][-1],level,  tiempoSolicitudDormir, timeStamp,reactionTime, tipoPregunta, preguntaCorrecta]
+        dataFil = [idSesion[0][-1], idSesion[1][-1],level,  tiempoSolicitudDormir, timeStamp,reactionTime, tipoPregunta, preguntaCorrecta]
         tiempoSolicitudDormir = '-'
         data.append(dataFil) # Anyado al final de la lista de datos
 
@@ -220,23 +257,25 @@ for i in range(2,numEvents):
         else:
             reactionTime = 'Tiempo excedido'
 
-        dataFil = [splitText[0][-1], splitText[1][-1],level, tiempoSolicitudParada , timeStamp,reactionTime, tipoPregunta, preguntaCorrecta]
+        dataFil = [idSesion[0][-1], idSesion[1][-1],level, tiempoSolicitudParada , timeStamp,reactionTime, tipoPregunta, preguntaCorrecta]
         tiempoSolicitudParada = '-'
         data.append(dataFil) # Anyado al final de la lista de datos
 
     # Si es Ubicacion lo pongo sinmas
-    # Siguiente fila que quiero anyadir
     elif tipoPregunta == 'Ubicacion':
-        dataFil = [splitText[0][-1], splitText[1][-1],level,  timeStamp, '-','-', tipoPregunta, preguntaCorrecta]
+        dataFil = [idSesion[0][-1], idSesion[1][-1],level,  timeStamp, '-','-', tipoPregunta, preguntaCorrecta]
         data.append(dataFil) # Anyado al final de la lista de datos
 
     tipoPregunta = '-'
     preguntaCorrecta = '-'
     
+    tiempoEventoAnt = timeStamp # Guarda tiempo del evento anterior
     #print(f"Iteración {i} Num pasos planificados: {numPasosPlanificados}")
 
 print(f"Num pasos planificados: {numPasosPlanificados} \nNum pasos ejecutados: {numPasosEjecutados} \nNum dormir planificado: {numPreguntasDormir} \nNum ubicacion planificado: {numUbicacionPlanificada} \nNum paradas hechas: {numParadasHechas}/{numParadasHechas + numParadasOmitidas}") # Esto por usuario
 print(f"\nNum errores: {numErrores} \nNum errores ubi: {numErroresUbicacion} \nNum errores dormir: {numErroresDormir} \nNum errores parada: {numErroresParada} \nError por tiempo excedido: {numTiempoExcedido}")
+print(f"\nTiempos misiones: {tiemposMisiones}")
+print(f"Tiempos niveles: {tiemposNiveles}")
 
 # Abro archivo .csv para guardar los datos leidos
 file =  open('../datos.csv', 'w', newline='')
