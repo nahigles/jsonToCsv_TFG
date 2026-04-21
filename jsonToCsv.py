@@ -14,9 +14,14 @@ tiempoInicioMision = '-'
 tiempoEventoAnt = '-'
 cambioNivel = False
 tiempoInicioNivel = '-'
+reglasCumplidas = False
+global porcentajeReglasCumplidasEjecucion
+
 
 numErrores = 0
-numPasosPlanificados = 0
+numPasosPlanificados = 0 # Pasos planificados por intento
+numPasosPlanificadosNivel = 0 # Pasos planificados por nivel
+numPasosPlanificadosTotales = 0 # Todos los pasos planificados por sesion
 numPasosEjecutados = 0
 numPreguntasDormir = 0
 numUbicacionPlanificada = 0
@@ -26,10 +31,10 @@ numErroresParada = 0
 numTiempoExcedido = 0
 numParadasHechas = 0
 numParadasOmitidas = 0
+numIntento = 1
 
 tiemposMisiones = []
 tiemposNiveles = []
-
 
 def MCEvent(i, e, eValue, info): 
 
@@ -44,6 +49,7 @@ def MCEvent(i, e, eValue, info):
     cambioNivel = info[7]
     level = info[8]
     levelPrev = info[9]
+    reglasCumplidas = info[10]
 
     global numErrores
     global numPasosPlanificados
@@ -143,9 +149,11 @@ def MCEvent(i, e, eValue, info):
         tiempoExcedido = True
 
     elif e == "Se cumplen las reglas":
-        a = ''
+        reglasCumplidas = True
+
     elif e == "Se incumplen las reglas":
-        b = ''
+        reglasCumplidas = False
+
     elif eValue == "Envio de ubicacion omitido":
         tipoPregunta = 'Ubicacion'
         preguntaCorrecta = 'Erroneo'
@@ -155,7 +163,7 @@ def MCEvent(i, e, eValue, info):
         numErroresUbicacion += 1
     
 
-    return tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop, tiempoExcedido, misionEmpezada, level, cambioNivel, levelPrev
+    return tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop, tiempoExcedido, misionEmpezada, level, cambioNivel, levelPrev, reglasCumplidas
 
 
 def calculateTime(t1,t2):
@@ -180,8 +188,9 @@ numEvents = len(datos_JSON[name]) # Numero de eventos del json
 txt = datos_JSON[name][0]["Eventos"][0]["Paciente y numero de sesion"]
 idSesion = txt.split(", ")
 
+
 # Datos con los titulos de cada columna
-data = [['ID','Sesion', 'Nivel', 'Tiempo_Pregunta', 'Tiempo_Respuesta','Tiempo_Reaccion', 'Tipo_Pregunta','Respuesta']]
+data = [['ID','Sesion', 'Nivel', 'Intento', 'Tiempo_Pregunta/Inicio', 'Tiempo_Respuesta/Final','Tiempo_Reaccion/Duracion(s)', 'Tipo_Pregunta','Respuesta', 'Pasos planificados', 'Pasos ejecutados', 'Errores ejecucion', '% Reglas respetadas', 'Num dormir planificado', 'Num ubicacion planificado', 'Paradas hechas', 'Errores ubicacion', 'Errores dormir','Errores parada','Errores por tiempo excedido']]
 
 level = -1
 levelPrev = -1
@@ -197,7 +206,7 @@ for i in range(1,numEvents):
 
     eventName = list(datos_JSON[name][i]["Eventos"][0].keys())[0]
     eventValue = list(datos_JSON[name][i]["Eventos"][0].values())[0]
-    infoEvent = MCEvent(i,eventName,eventValue, [tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop, misionEmpezada, cambioNivel, level, levelPrev])
+    infoEvent = MCEvent(i,eventName,eventValue, [tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop, misionEmpezada, cambioNivel, level, levelPrev, reglasCumplidas])
 
     tipoPregunta = infoEvent[0]
     preguntaCorrecta = infoEvent[1]
@@ -210,43 +219,17 @@ for i in range(1,numEvents):
     level = infoEvent[8]
     cambioNivel = infoEvent[9]
     levelPrev = infoEvent[10]
+    reglasCumplidas = infoEvent[11]
 
-    # Guarda tiempo inicio sesion  
-    if (not misionEmpezada) or (i == (numEvents-1)):
-        if(tiempoInicioMision != '-'):
-            if (i == (numEvents-1)):
-                tiempoEventoAnt = timeStamp
 
-            duration = calculateTime(tiempoInicioMision, tiempoEventoAnt)
-            tiemposMisiones.append(duration)
-            tiempoInicioMision = '-'
-            misionEmpezada = True
-    else:
-        if(tiempoInicioMision == '-'):
-            tiempoInicioMision = timeStamp
-
-    # Guarda tiempo nivel
-    if(not cambioNivel) or (i == (numEvents -1)):
-        if tiempoInicioNivel != '-':
-            if i == (numEvents - 1):
-                tiempoEventoAnt = timeStamp
-
-            duration = calculateTime(tiempoInicioNivel, tiempoEventoAnt)
-            tiemposNiveles.append([levelPrev,duration])
-            tiempoInicioNivel = '-'
-            cambioNivel = True
-    else:
-        if tiempoInicioNivel == '-':
-            tiempoInicioNivel = timeStamp
-
-    # Si es Dormir 
+        # Si es Dormir 
     if tipoPregunta == 'Dormir' and tiempoSolicitudDormir != '-' and writeSleep:
         if not tiempoExcedido:
             reactionTime = calculateTime(tiempoSolicitudDormir, timeStamp)
         else:
             reactionTime = 'Tiempo excedido'
 
-        dataFil = [idSesion[0][-1], idSesion[1][-1],level,  tiempoSolicitudDormir, timeStamp,reactionTime, tipoPregunta, preguntaCorrecta]
+        dataFil = [idSesion[0][-1], idSesion[1][-1],level, numIntento, tiempoSolicitudDormir, timeStamp,reactionTime, tipoPregunta, preguntaCorrecta]
         tiempoSolicitudDormir = '-'
         data.append(dataFil) # Anyado al final de la lista de datos
 
@@ -257,13 +240,13 @@ for i in range(1,numEvents):
         else:
             reactionTime = 'Tiempo excedido'
 
-        dataFil = [idSesion[0][-1], idSesion[1][-1],level, tiempoSolicitudParada , timeStamp,reactionTime, tipoPregunta, preguntaCorrecta]
+        dataFil = [idSesion[0][-1], idSesion[1][-1],level,numIntento, tiempoSolicitudParada , timeStamp,reactionTime, tipoPregunta, preguntaCorrecta]
         tiempoSolicitudParada = '-'
         data.append(dataFil) # Anyado al final de la lista de datos
 
     # Si es Ubicacion lo pongo sinmas
     elif tipoPregunta == 'Ubicacion':
-        dataFil = [idSesion[0][-1], idSesion[1][-1],level,  timeStamp, '-','-', tipoPregunta, preguntaCorrecta]
+        dataFil = [idSesion[0][-1], idSesion[1][-1],level,numIntento,  timeStamp, '-','-', tipoPregunta, preguntaCorrecta]
         data.append(dataFil) # Anyado al final de la lista de datos
 
     tipoPregunta = '-'
@@ -272,7 +255,83 @@ for i in range(1,numEvents):
     tiempoEventoAnt = timeStamp # Guarda tiempo del evento anterior
     #print(f"Iteración {i} Num pasos planificados: {numPasosPlanificados}")
 
-print(f"Num pasos planificados: {numPasosPlanificados} \nNum pasos ejecutados: {numPasosEjecutados} \nNum dormir planificado: {numPreguntasDormir} \nNum ubicacion planificado: {numUbicacionPlanificada} \nNum paradas hechas: {numParadasHechas}/{numParadasHechas + numParadasOmitidas}") # Esto por usuario
+    duration = 0
+    escribirMetricas = False
+    # Guarda tiempo inicio sesion  
+    if (not misionEmpezada) or (i == (numEvents-1)):
+        if(tiempoInicioMision != '-'):
+            if (i == (numEvents-1)):
+                tiempoEventoAnt = timeStamp
+
+            duration = calculateTime(tiempoInicioMision, tiempoEventoAnt)
+
+            # Porcentaje de reglas cumplidas
+            porcentajeReglasCumplidasEjecucion = 100
+
+            if numErroresDormir > 0:
+                porcentajeReglasCumplidasEjecucion -= 25
+            if numErroresParada  > 0:
+                porcentajeReglasCumplidasEjecucion -= 25
+            if numErroresUbicacion  > 0:
+                porcentajeReglasCumplidasEjecucion -= 25
+            
+            # Guarda porcentaje de reglas cumplidas y duracion por mision
+            tiemposMisiones.append([porcentajeReglasCumplidasEjecucion, duration])
+            tiempoInicioMision = '-'
+            misionEmpezada = True
+            
+
+            escribirMetricas = True
+
+    else:
+        if(tiempoInicioMision == '-'):
+            tiempoInicioMision = timeStamp
+
+    # Guarda tiempo nivel
+    avanzaNivel = False
+    if(not cambioNivel) or (i == (numEvents -1)):
+        if tiempoInicioNivel != '-':
+            if i == (numEvents - 1):
+                tiempoEventoAnt = timeStamp
+
+            duration2 = calculateTime(tiempoInicioNivel, tiempoEventoAnt)
+            nivelCompletado = reglasCumplidas and porcentajeReglasCumplidasEjecucion == 100
+            tiemposNiveles.append([levelPrev, nivelCompletado, duration2])
+            tiempoInicioNivel = '-'
+            cambioNivel = True
+            #if not (i == (numEvents -1)):
+                #numIntento = 1
+            avanzaNivel = True
+    else:
+        if tiempoInicioNivel == '-':
+            tiempoInicioNivel = timeStamp
+
+    if escribirMetricas:
+            # Ayado metricas por mision
+            dataFil = [idSesion[0][-1], idSesion[1][-1], levelPrev,numIntento,  '', '', duration , 'Final intento', '', numPasosPlanificados]
+            data.append(dataFil) # Anyado al final de la lista de datos
+
+            numPasosPlanificadosTotales += numPasosPlanificados
+            numPasosPlanificadosNivel += numPasosPlanificados
+            numPasosPlanificados = 0
+            if not avanzaNivel:
+                numIntento += 1
+            else:
+                dataFil = [idSesion[0][-1], idSesion[1][-1], levelPrev,numIntento,  '', '', duration2 , 'Final nivel', '', numPasosPlanificadosNivel]
+                data.append(dataFil) # Anyado al final de la lista de datos
+                avanzaNivel = False
+                numPasosPlanificadosNivel = 0
+                numIntento = 1
+
+            escribirMetricas = False
+
+dataFil = ['Metricas:']
+data.append(dataFil) # Anyado al final de la lista de datos
+dataFil = [idSesion[0][-1], idSesion[1][-1], len(tiemposNiveles),len(tiemposMisiones),  '', '','', '', '', numPasosPlanificadosTotales]
+data.append(dataFil) # Anyado al final de la lista de datos
+
+
+print(f"Num pasos planificados: {numPasosPlanificadosTotales} \nNum pasos ejecutados: {numPasosEjecutados} \nNum dormir planificado: {numPreguntasDormir} \nNum ubicacion planificado: {numUbicacionPlanificada} \nNum paradas hechas: {numParadasHechas}/{numParadasHechas + numParadasOmitidas}") # Esto por usuario
 print(f"\nNum errores: {numErrores} \nNum errores ubi: {numErroresUbicacion} \nNum errores dormir: {numErroresDormir} \nNum errores parada: {numErroresParada} \nError por tiempo excedido: {numTiempoExcedido}")
 print(f"\nTiempos misiones: {tiemposMisiones}")
 print(f"Tiempos niveles: {tiemposNiveles}")
