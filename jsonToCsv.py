@@ -22,7 +22,9 @@ numErrores = 0
 numPasosPlanificados = 0 # Pasos planificados por intento
 numPasosPlanificadosNivel = 0 # Pasos planificados por nivel
 numPasosPlanificadosTotales = 0 # Todos los pasos planificados por sesion
-numPasosEjecutados = 0
+numPasosEjecutados = 0 # Pasos ejecutados por intento
+numPasosEjecutadosNivel = 0 # Pasos ejecutados por nivel
+numPasosEjecutadosTotales = 0 # Pasos ejecutados por sesion
 numPreguntasDormir = 0
 numUbicacionPlanificada = 0
 numErroresUbicacion = 0
@@ -308,30 +310,36 @@ for i in range(1,numEvents):
 
     if escribirMetricas:
             # Ayado metricas por mision
-            dataFil = [idSesion[0][-1], idSesion[1][-1], levelPrev,numIntento,  '', '', duration , 'Final intento', '', numPasosPlanificados]
+            dataFil = [idSesion[0][-1], idSesion[1][-1], levelPrev,numIntento,  '', '', duration , 'Final intento', '', numPasosPlanificados, numPasosEjecutados]
             data.append(dataFil) # Anyado al final de la lista de datos
 
             numPasosPlanificadosTotales += numPasosPlanificados
             numPasosPlanificadosNivel += numPasosPlanificados
             numPasosPlanificados = 0
+
+            numPasosEjecutadosTotales += numPasosEjecutados
+            numPasosEjecutadosNivel += numPasosEjecutados
+            numPasosEjecutados = 0
+
             if not avanzaNivel:
                 numIntento += 1
             else:
-                dataFil = [idSesion[0][-1], idSesion[1][-1], levelPrev,numIntento,  '', '', duration2 , 'Final nivel', '', numPasosPlanificadosNivel]
+                dataFil = [idSesion[0][-1], idSesion[1][-1], levelPrev,numIntento,  '', '', duration2 , 'Final nivel', '', numPasosPlanificadosNivel, numPasosEjecutadosNivel]
                 data.append(dataFil) # Anyado al final de la lista de datos
                 avanzaNivel = False
                 numPasosPlanificadosNivel = 0
+                numPasosEjecutadosNivel = 0
                 numIntento = 1
 
             escribirMetricas = False
 
-dataFil = ['Metricas:']
+dataFil = ['Metricas sesion:']
 data.append(dataFil) # Anyado al final de la lista de datos
-dataFil = [idSesion[0][-1], idSesion[1][-1], len(tiemposNiveles),len(tiemposMisiones),  '', '','', '', '', numPasosPlanificadosTotales]
+dataFil = [idSesion[0][-1], idSesion[1][-1], len(tiemposNiveles),len(tiemposMisiones),  '', '','', '', '', numPasosPlanificadosTotales, numPasosEjecutadosTotales]
 data.append(dataFil) # Anyado al final de la lista de datos
 
 
-print(f"Num pasos planificados: {numPasosPlanificadosTotales} \nNum pasos ejecutados: {numPasosEjecutados} \nNum dormir planificado: {numPreguntasDormir} \nNum ubicacion planificado: {numUbicacionPlanificada} \nNum paradas hechas: {numParadasHechas}/{numParadasHechas + numParadasOmitidas}") # Esto por usuario
+print(f"Num pasos planificados: {numPasosPlanificadosTotales} \nNum pasos ejecutados: {numPasosEjecutadosTotales} \nNum dormir planificado: {numPreguntasDormir} \nNum ubicacion planificado: {numUbicacionPlanificada} \nNum paradas hechas: {numParadasHechas}/{numParadasHechas + numParadasOmitidas}") # Esto por usuario
 print(f"\nNum errores: {numErrores} \nNum errores ubi: {numErroresUbicacion} \nNum errores dormir: {numErroresDormir} \nNum errores parada: {numErroresParada} \nError por tiempo excedido: {numTiempoExcedido}")
 print(f"\nTiempos misiones: {tiemposMisiones}")
 print(f"Tiempos niveles: {tiemposNiveles}")
