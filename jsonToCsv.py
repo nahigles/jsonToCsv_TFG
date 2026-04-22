@@ -18,21 +18,38 @@ reglasCumplidas = False
 global porcentajeReglasCumplidasEjecucion
 
 
-numErrores = 0
+numErrores = 0 # Errores por intento
+numErroresNivel = 0 # Errores por nivel
+numErroresTotales = 0 # Errores por sesion
+
 numPasosPlanificados = 0 # Pasos planificados por intento
 numPasosPlanificadosNivel = 0 # Pasos planificados por nivel
 numPasosPlanificadosTotales = 0 # Todos los pasos planificados por sesion
+
 numPasosEjecutados = 0 # Pasos ejecutados por intento
 numPasosEjecutadosNivel = 0 # Pasos ejecutados por nivel
 numPasosEjecutadosTotales = 0 # Pasos ejecutados por sesion
-numPreguntasDormir = 0
-numUbicacionPlanificada = 0
+
+numPreguntasDormir = 0 # Numero de preguntas de dormir planificadas por intento
+numPreguntasDormirNivel = 0 # Numero de preguntas de dormir planificadas por nivel
+numPreguntasDormirTotales = 0 # Numero de preguntas de dormir planificadas por sesion
+
+numUbicacionPlanificada = 0 # Numero de envios de ubuicacion planificados por intento
+numUbicacionPlanificadaNivel = 0 # Numero de envios de ubuicacion planificados por nivel
+numUbicacionPlanificadaTotales = 0 # Numero de envios de ubuicacion planificados por sesion
+
+numParadasHechas = 0 # Intento
+numParadasHechasNivel= 0 # Nivel
+numParadasHechasTotales = 0 # Sesion
+
+numParadasOmitidas = 0 # Intento
+numParadasOmitidasNivel = 0 # Nivel
+numParadasOmitidasTotales = 0 # Sesion
+
 numErroresUbicacion = 0
 numErroresDormir = 0
 numErroresParada = 0
 numTiempoExcedido = 0
-numParadasHechas = 0
-numParadasOmitidas = 0
 numIntento = 1
 
 tiemposMisiones = []
@@ -310,37 +327,70 @@ for i in range(1,numEvents):
 
     if escribirMetricas:
             # Ayado metricas por mision
-            dataFil = [idSesion[0][-1], idSesion[1][-1], levelPrev,numIntento,  '', '', duration , 'Final intento', '', numPasosPlanificados, numPasosEjecutados]
+            #paradasHechasText = f"{numParadasHechas}/{numParadasHechas + numParadasOmitidas}"
+            dataFil = [idSesion[0][-1], idSesion[1][-1], levelPrev,numIntento,  '', '', duration , 'Final intento', '', numPasosPlanificados, numPasosEjecutados, numErrores, porcentajeReglasCumplidasEjecucion, numPreguntasDormir, numUbicacionPlanificada, f"{numParadasHechas}/{numParadasHechas + numParadasOmitidas}"]
             data.append(dataFil) # Anyado al final de la lista de datos
 
+            # Pasos planificados
             numPasosPlanificadosTotales += numPasosPlanificados
             numPasosPlanificadosNivel += numPasosPlanificados
             numPasosPlanificados = 0
 
+            # Pasos ejecutados
             numPasosEjecutadosTotales += numPasosEjecutados
             numPasosEjecutadosNivel += numPasosEjecutados
             numPasosEjecutados = 0
 
+            # Errores
+            numErroresTotales += numErrores
+            numErroresNivel += numErrores
+            numErrores = 0
+
+            # Preguntas dormir planificadas
+            numPreguntasDormirTotales += numPreguntasDormir
+            numPreguntasDormirNivel += numPreguntasDormir
+            numPreguntasDormir = 0
+
+            # Preguntas ubicacion planificadas
+            numUbicacionPlanificadaTotales += numUbicacionPlanificada
+            numUbicacionPlanificadaNivel += numUbicacionPlanificada
+            numUbicacionPlanificada = 0
+
+            # Paradas hechas y omitidas
+            numParadasHechasTotales += numParadasHechas
+            numParadasHechasNivel += numParadasHechas
+            numParadasHechas = 0
+
+            numParadasOmitidasTotales += numParadasOmitidas
+            numParadasOmitidasNivel += numParadasOmitidas
+            numParadasOmitidas = 0
+
             if not avanzaNivel:
                 numIntento += 1
             else:
-                dataFil = [idSesion[0][-1], idSesion[1][-1], levelPrev,numIntento,  '', '', duration2 , 'Final nivel', '', numPasosPlanificadosNivel, numPasosEjecutadosNivel]
+                dataFil = [idSesion[0][-1], idSesion[1][-1], levelPrev,numIntento,  '', '', duration2 , 'Final nivel', '', numPasosPlanificadosNivel, numPasosEjecutadosNivel, numErroresNivel, '', numPreguntasDormirNivel, numUbicacionPlanificadaNivel,  f"{numParadasHechasNivel}/{numParadasHechasNivel + numParadasOmitidasNivel}"]
                 data.append(dataFil) # Anyado al final de la lista de datos
                 avanzaNivel = False
                 numPasosPlanificadosNivel = 0
                 numPasosEjecutadosNivel = 0
+                numErroresNivel = 0
+                numPreguntasDormirNivel = 0
+                numUbicacionPlanificadaNivel = 0
+                numParadasHechasNivel = 0
+                numParadasOmitidasNivel = 0
+
                 numIntento = 1
 
             escribirMetricas = False
 
 dataFil = ['Metricas sesion:']
 data.append(dataFil) # Anyado al final de la lista de datos
-dataFil = [idSesion[0][-1], idSesion[1][-1], len(tiemposNiveles),len(tiemposMisiones),  '', '','', '', '', numPasosPlanificadosTotales, numPasosEjecutadosTotales]
+dataFil = [idSesion[0][-1], idSesion[1][-1], len(tiemposNiveles),len(tiemposMisiones),  '', '','', '', '', numPasosPlanificadosTotales, numPasosEjecutadosTotales, numErroresTotales,'', numPreguntasDormirTotales, numUbicacionPlanificadaTotales, f"{numParadasHechasTotales}/{numParadasHechasTotales + numParadasOmitidasTotales}"]
 data.append(dataFil) # Anyado al final de la lista de datos
 
 
-print(f"Num pasos planificados: {numPasosPlanificadosTotales} \nNum pasos ejecutados: {numPasosEjecutadosTotales} \nNum dormir planificado: {numPreguntasDormir} \nNum ubicacion planificado: {numUbicacionPlanificada} \nNum paradas hechas: {numParadasHechas}/{numParadasHechas + numParadasOmitidas}") # Esto por usuario
-print(f"\nNum errores: {numErrores} \nNum errores ubi: {numErroresUbicacion} \nNum errores dormir: {numErroresDormir} \nNum errores parada: {numErroresParada} \nError por tiempo excedido: {numTiempoExcedido}")
+print(f"Num pasos planificados: {numPasosPlanificadosTotales} \nNum pasos ejecutados: {numPasosEjecutadosTotales} \nNum dormir planificado: {numPreguntasDormirTotales} \nNum ubicacion planificado: {numUbicacionPlanificadaTotales} \nNum paradas hechas: {numParadasHechasTotales}/{numParadasHechasTotales + numParadasOmitidasTotales}") # Esto por usuario
+print(f"\nNum errores: {numErroresTotales} \nNum errores ubi: {numErroresUbicacion} \nNum errores dormir: {numErroresDormir} \nNum errores parada: {numErroresParada} \nError por tiempo excedido: {numTiempoExcedido}")
 print(f"\nTiempos misiones: {tiemposMisiones}")
 print(f"Tiempos niveles: {tiemposNiveles}")
 
