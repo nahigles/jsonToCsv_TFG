@@ -46,10 +46,23 @@ numParadasOmitidas = 0 # Intento
 numParadasOmitidasNivel = 0 # Nivel
 numParadasOmitidasTotales = 0 # Sesion
 
+# Errores
 numErroresUbicacion = 0
+numErroresUbicacionNivel = 0
+numErroresUbicacionTotales = 0
+
 numErroresDormir = 0
+numErroresDormirNivel = 0
+numErroresDormirTotales = 0
+
 numErroresParada = 0
+numErroresParadaNivel = 0
+numErroresParadaTotales = 0
+
 numTiempoExcedido = 0
+numTiempoExcedidoNivel = 0
+numTiempoExcedidoTotales = 0
+
 numIntento = 1
 
 tiemposMisiones = []
@@ -318,8 +331,6 @@ for i in range(1,numEvents):
             tiemposNiveles.append([levelPrev, nivelCompletado, duration2])
             tiempoInicioNivel = '-'
             cambioNivel = True
-            #if not (i == (numEvents -1)):
-                #numIntento = 1
             avanzaNivel = True
     else:
         if tiempoInicioNivel == '-':
@@ -328,7 +339,7 @@ for i in range(1,numEvents):
     if escribirMetricas:
             # Ayado metricas por mision
             #paradasHechasText = f"{numParadasHechas}/{numParadasHechas + numParadasOmitidas}"
-            dataFil = [idSesion[0][-1], idSesion[1][-1], levelPrev,numIntento,  '', '', duration , 'Final intento', '', numPasosPlanificados, numPasosEjecutados, numErrores, porcentajeReglasCumplidasEjecucion, numPreguntasDormir, numUbicacionPlanificada, f"{numParadasHechas}/{numParadasHechas + numParadasOmitidas}"]
+            dataFil = [idSesion[0][-1], idSesion[1][-1], levelPrev,numIntento,  '', '', duration , 'Final intento', '', numPasosPlanificados, numPasosEjecutados, numErrores, porcentajeReglasCumplidasEjecucion, numPreguntasDormir, numUbicacionPlanificada, f"{numParadasHechas}/{numParadasHechas + numParadasOmitidas}",numErroresUbicacion,numErroresDormir, numErroresParada, numTiempoExcedido]
             data.append(dataFil) # Anyado al final de la lista de datos
 
             # Pasos planificados
@@ -365,10 +376,27 @@ for i in range(1,numEvents):
             numParadasOmitidasNivel += numParadasOmitidas
             numParadasOmitidas = 0
 
+            # Errores
+            numErroresUbicacionTotales += numErroresUbicacion
+            numErroresUbicacionNivel += numErroresUbicacion
+            numErroresUbicacion = 0
+
+            numErroresDormirTotales += numErroresDormir
+            numErroresDormirNivel += numErroresDormir
+            numErroresDormir = 0
+
+            numErroresParadaTotales += numErroresParada
+            numErroresParadaNivel += numErroresParada
+            numErroresParada = 0
+
+            numTiempoExcedidoTotales += numTiempoExcedido
+            numTiempoExcedidoNivel += numTiempoExcedido
+            numTiempoExcedido = 0            
+
             if not avanzaNivel:
                 numIntento += 1
             else:
-                dataFil = [idSesion[0][-1], idSesion[1][-1], levelPrev,numIntento,  '', '', duration2 , 'Final nivel', '', numPasosPlanificadosNivel, numPasosEjecutadosNivel, numErroresNivel, '', numPreguntasDormirNivel, numUbicacionPlanificadaNivel,  f"{numParadasHechasNivel}/{numParadasHechasNivel + numParadasOmitidasNivel}"]
+                dataFil = [idSesion[0][-1], idSesion[1][-1], levelPrev,numIntento,  '', '', duration2 , 'Final nivel', '', numPasosPlanificadosNivel, numPasosEjecutadosNivel, numErroresNivel, '', numPreguntasDormirNivel, numUbicacionPlanificadaNivel,  f"{numParadasHechasNivel}/{numParadasHechasNivel + numParadasOmitidasNivel}", numErroresUbicacionNivel, numErroresDormirNivel, numErroresParadaNivel, numTiempoExcedidoNivel]
                 data.append(dataFil) # Anyado al final de la lista de datos
                 avanzaNivel = False
                 numPasosPlanificadosNivel = 0
@@ -378,6 +406,10 @@ for i in range(1,numEvents):
                 numUbicacionPlanificadaNivel = 0
                 numParadasHechasNivel = 0
                 numParadasOmitidasNivel = 0
+                numErroresUbicacionNivel = 0
+                numErroresDormirNivel = 0
+                numErroresParadaNivel = 0
+                numTiempoExcedidoNivel = 0
 
                 numIntento = 1
 
@@ -385,12 +417,12 @@ for i in range(1,numEvents):
 
 dataFil = ['Metricas sesion:']
 data.append(dataFil) # Anyado al final de la lista de datos
-dataFil = [idSesion[0][-1], idSesion[1][-1], len(tiemposNiveles),len(tiemposMisiones),  '', '','', '', '', numPasosPlanificadosTotales, numPasosEjecutadosTotales, numErroresTotales,'', numPreguntasDormirTotales, numUbicacionPlanificadaTotales, f"{numParadasHechasTotales}/{numParadasHechasTotales + numParadasOmitidasTotales}"]
+dataFil = [idSesion[0][-1], idSesion[1][-1], len(tiemposNiveles),len(tiemposMisiones),  '', '','', '', '', numPasosPlanificadosTotales, numPasosEjecutadosTotales, numErroresTotales,'', numPreguntasDormirTotales, numUbicacionPlanificadaTotales, f"{numParadasHechasTotales}/{numParadasHechasTotales + numParadasOmitidasTotales}", numErroresUbicacionTotales, numErroresDormirTotales, numErroresParadaTotales, numTiempoExcedidoTotales]
 data.append(dataFil) # Anyado al final de la lista de datos
 
 
 print(f"Num pasos planificados: {numPasosPlanificadosTotales} \nNum pasos ejecutados: {numPasosEjecutadosTotales} \nNum dormir planificado: {numPreguntasDormirTotales} \nNum ubicacion planificado: {numUbicacionPlanificadaTotales} \nNum paradas hechas: {numParadasHechasTotales}/{numParadasHechasTotales + numParadasOmitidasTotales}") # Esto por usuario
-print(f"\nNum errores: {numErroresTotales} \nNum errores ubi: {numErroresUbicacion} \nNum errores dormir: {numErroresDormir} \nNum errores parada: {numErroresParada} \nError por tiempo excedido: {numTiempoExcedido}")
+print(f"\nNum errores: {numErroresTotales} \nNum errores ubi: {numErroresUbicacionTotales} \nNum errores dormir: {numErroresDormirTotales} \nNum errores parada: {numErroresParadaTotales} \nError por tiempo excedido: {numTiempoExcedidoTotales}")
 print(f"\nTiempos misiones: {tiemposMisiones}")
 print(f"Tiempos niveles: {tiemposNiveles}")
 
