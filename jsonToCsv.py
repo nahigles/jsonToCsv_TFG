@@ -1,5 +1,6 @@
 import csv
 import json
+import os
 
 tipoPregunta = '-'
 preguntaCorrecta = '-'
@@ -185,6 +186,9 @@ def MCEvent(i, e, eValue, info):
 
     elif e == "Se incumplen las reglas":
         reglasCumplidas = False
+    
+    elif e == "Acabado":
+        tipoPregunta = 'Acabado'
 
     elif eValue == "Envio de ubicacion omitido":
         tipoPregunta = 'Ubicacion'
@@ -208,223 +212,231 @@ def calculateTime(t1,t2):
 
 
 ruta =  "../Mision Colombia/"
-name = "2_MisionColombia_2025-10-30_1.json"
+#name = "2_MisionColombia_2025-10-30_1.json"
 
-with open(ruta + name) as archivo:
-    datos_JSON = json.load(archivo)
+nombresArchivos = os.listdir(ruta)
 
-
-numEvents = len(datos_JSON[name]) # Numero de eventos del json
-
-# ID del paciente y numero de sesion
-txt = datos_JSON[name][0]["Eventos"][0]["Paciente y numero de sesion"]
-idSesion = txt.split(", ")
-
+nArchivos = len(nombresArchivos)
+print(f"Numero de archivos: {nArchivos}")
 
 # Datos con los titulos de cada columna
 data = [['ID','Sesion', 'Nivel', 'Intento', 'Tiempo_Pregunta/Inicio', 'Tiempo_Respuesta/Final','Tiempo_Reaccion/Duracion(s)', 'Tipo_Pregunta','Respuesta', 'Pasos planificados', 'Pasos ejecutados', 'Errores ejecucion', '% Reglas respetadas', 'Num dormir planificado', 'Num ubicacion planificado', 'Paradas hechas', 'Errores ubicacion', 'Errores dormir','Errores parada','Errores por tiempo excedido']]
 
-level = -1
-levelPrev = -1
+for name in nombresArchivos:
 
-# Voy anyadiendo siguientes filas
-for i in range(1,numEvents):
-
-    # Fecha y Tiempo
-    txt = datos_JSON[name][i]["Tiempo"]
-    splitT = txt.split(" ")
-    date = splitT[0]
-    timeStamp = splitT[1]
-
-    eventName = list(datos_JSON[name][i]["Eventos"][0].keys())[0]
-    eventValue = list(datos_JSON[name][i]["Eventos"][0].values())[0]
-    infoEvent = MCEvent(i,eventName,eventValue, [tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop, misionEmpezada, cambioNivel, level, levelPrev, reglasCumplidas])
-
-    tipoPregunta = infoEvent[0]
-    preguntaCorrecta = infoEvent[1]
-    tiempoSolicitudParada = infoEvent[2]
-    tiempoSolicitudDormir = infoEvent[3]
-    writeSleep = infoEvent[4]
-    writeStop = infoEvent[5]
-    tiempoExcedido = infoEvent[6]
-    misionEmpezada = infoEvent[7]
-    level = infoEvent[8]
-    cambioNivel = infoEvent[9]
-    levelPrev = infoEvent[10]
-    reglasCumplidas = infoEvent[11]
+    with open(ruta + name) as archivo:
+        datos_JSON = json.load(archivo)
 
 
-        # Si es Dormir 
-    if tipoPregunta == 'Dormir' and tiempoSolicitudDormir != '-' and writeSleep:
-        if not tiempoExcedido:
-            reactionTime = calculateTime(tiempoSolicitudDormir, timeStamp)
-        else:
-            reactionTime = 'Tiempo excedido'
+    numEvents = len(datos_JSON[name]) # Numero de eventos del json
 
-        dataFil = [idSesion[0][-1], idSesion[1][-1],level, numIntento, tiempoSolicitudDormir, timeStamp,reactionTime, tipoPregunta, preguntaCorrecta]
-        tiempoSolicitudDormir = '-'
-        data.append(dataFil) # Anyado al final de la lista de datos
+    # ID del paciente y numero de sesion
+    txt = datos_JSON[name][0]["Eventos"][0]["Paciente y numero de sesion"]
+    idSesion = txt.split(", ")
 
-    # Si es Parada
-    elif tipoPregunta == 'Parada' and tiempoSolicitudParada != '-' and writeStop:
-        if not tiempoExcedido:
-            reactionTime = calculateTime(tiempoSolicitudParada, timeStamp)
-        else:
-            reactionTime = 'Tiempo excedido'
+    idNum = idSesion[0].split()[-1]
+    sesionNum = idSesion[1].split()[-1]
 
-        dataFil = [idSesion[0][-1], idSesion[1][-1],level,numIntento, tiempoSolicitudParada , timeStamp,reactionTime, tipoPregunta, preguntaCorrecta]
-        tiempoSolicitudParada = '-'
-        data.append(dataFil) # Anyado al final de la lista de datos
+    level = -1
+    levelPrev = -1
 
-    # Si es Ubicacion lo pongo sinmas
-    elif tipoPregunta == 'Ubicacion':
-        dataFil = [idSesion[0][-1], idSesion[1][-1],level,numIntento,  timeStamp, '-','-', tipoPregunta, preguntaCorrecta]
-        data.append(dataFil) # Anyado al final de la lista de datos
+    # Voy anyadiendo siguientes filas
+    for i in range(1,numEvents):
 
-    tipoPregunta = '-'
-    preguntaCorrecta = '-'
-    
-    tiempoEventoAnt = timeStamp # Guarda tiempo del evento anterior
-    #print(f"Iteración {i} Num pasos planificados: {numPasosPlanificados}")
+        # Fecha y Tiempo
+        txt = datos_JSON[name][i]["Tiempo"]
+        splitT = txt.split(" ")
+        date = splitT[0]
+        timeStamp = splitT[1]
 
-    duration = 0
-    escribirMetricas = False
-    # Guarda tiempo inicio sesion  
-    if (not misionEmpezada) or (i == (numEvents-1)):
-        if(tiempoInicioMision != '-'):
-            if (i == (numEvents-1)):
-                tiempoEventoAnt = timeStamp
+        eventName = list(datos_JSON[name][i]["Eventos"][0].keys())[0]
+        eventValue = list(datos_JSON[name][i]["Eventos"][0].values())[0]
+        infoEvent = MCEvent(i,eventName,eventValue, [tipoPregunta, preguntaCorrecta, tiempoSolicitudParada, tiempoSolicitudDormir, writeSleep, writeStop, misionEmpezada, cambioNivel, level, levelPrev, reglasCumplidas])
 
-            duration = calculateTime(tiempoInicioMision, tiempoEventoAnt)
+        tipoPregunta = infoEvent[0]
+        preguntaCorrecta = infoEvent[1]
+        tiempoSolicitudParada = infoEvent[2]
+        tiempoSolicitudDormir = infoEvent[3]
+        writeSleep = infoEvent[4]
+        writeStop = infoEvent[5]
+        tiempoExcedido = infoEvent[6]
+        misionEmpezada = infoEvent[7]
+        level = infoEvent[8]
+        cambioNivel = infoEvent[9]
+        levelPrev = infoEvent[10]
+        reglasCumplidas = infoEvent[11]
 
-            # Porcentaje de reglas cumplidas
-            porcentajeReglasCumplidasEjecucion = 100
 
-            if numErroresDormir > 0:
-                porcentajeReglasCumplidasEjecucion -= 25
-            if numErroresParada  > 0:
-                porcentajeReglasCumplidasEjecucion -= 25
-            if numErroresUbicacion  > 0:
-                porcentajeReglasCumplidasEjecucion -= 25
-            
-            # Guarda porcentaje de reglas cumplidas y duracion por mision
-            tiemposMisiones.append([porcentajeReglasCumplidasEjecucion, duration])
-            tiempoInicioMision = '-'
-            misionEmpezada = True
-            
+            # Si es Dormir 
+        if tipoPregunta == 'Dormir' and tiempoSolicitudDormir != '-' and writeSleep:
+            if not tiempoExcedido:
+                reactionTime = calculateTime(tiempoSolicitudDormir, timeStamp)
+            else:
+                reactionTime = 'Tiempo excedido'
 
-            escribirMetricas = True
-
-    else:
-        if(tiempoInicioMision == '-'):
-            tiempoInicioMision = timeStamp
-
-    # Guarda tiempo nivel
-    avanzaNivel = False
-    if(not cambioNivel) or (i == (numEvents -1)):
-        if tiempoInicioNivel != '-':
-            if i == (numEvents - 1):
-                tiempoEventoAnt = timeStamp
-
-            duration2 = calculateTime(tiempoInicioNivel, tiempoEventoAnt)
-            nivelCompletado = reglasCumplidas and porcentajeReglasCumplidasEjecucion == 100
-            tiemposNiveles.append([levelPrev, nivelCompletado, duration2])
-            tiempoInicioNivel = '-'
-            cambioNivel = True
-            avanzaNivel = True
-    else:
-        if tiempoInicioNivel == '-':
-            tiempoInicioNivel = timeStamp
-
-    if escribirMetricas:
-            # Ayado metricas por mision
-            #paradasHechasText = f"{numParadasHechas}/{numParadasHechas + numParadasOmitidas}"
-            dataFil = [idSesion[0][-1], idSesion[1][-1], levelPrev,numIntento,  '', '', duration , 'Final intento', '', numPasosPlanificados, numPasosEjecutados, numErrores, porcentajeReglasCumplidasEjecucion, numPreguntasDormir, numUbicacionPlanificada, f"{numParadasHechas}/{numParadasHechas + numParadasOmitidas}",numErroresUbicacion,numErroresDormir, numErroresParada, numTiempoExcedido]
+            dataFil = [idNum, sesionNum,level, numIntento, tiempoSolicitudDormir, timeStamp,reactionTime, tipoPregunta, preguntaCorrecta]
+            tiempoSolicitudDormir = '-'
             data.append(dataFil) # Anyado al final de la lista de datos
 
-            # Pasos planificados
-            numPasosPlanificadosTotales += numPasosPlanificados
-            numPasosPlanificadosNivel += numPasosPlanificados
-            numPasosPlanificados = 0
-
-            # Pasos ejecutados
-            numPasosEjecutadosTotales += numPasosEjecutados
-            numPasosEjecutadosNivel += numPasosEjecutados
-            numPasosEjecutados = 0
-
-            # Errores
-            numErroresTotales += numErrores
-            numErroresNivel += numErrores
-            numErrores = 0
-
-            # Preguntas dormir planificadas
-            numPreguntasDormirTotales += numPreguntasDormir
-            numPreguntasDormirNivel += numPreguntasDormir
-            numPreguntasDormir = 0
-
-            # Preguntas ubicacion planificadas
-            numUbicacionPlanificadaTotales += numUbicacionPlanificada
-            numUbicacionPlanificadaNivel += numUbicacionPlanificada
-            numUbicacionPlanificada = 0
-
-            # Paradas hechas y omitidas
-            numParadasHechasTotales += numParadasHechas
-            numParadasHechasNivel += numParadasHechas
-            numParadasHechas = 0
-
-            numParadasOmitidasTotales += numParadasOmitidas
-            numParadasOmitidasNivel += numParadasOmitidas
-            numParadasOmitidas = 0
-
-            # Errores
-            numErroresUbicacionTotales += numErroresUbicacion
-            numErroresUbicacionNivel += numErroresUbicacion
-            numErroresUbicacion = 0
-
-            numErroresDormirTotales += numErroresDormir
-            numErroresDormirNivel += numErroresDormir
-            numErroresDormir = 0
-
-            numErroresParadaTotales += numErroresParada
-            numErroresParadaNivel += numErroresParada
-            numErroresParada = 0
-
-            numTiempoExcedidoTotales += numTiempoExcedido
-            numTiempoExcedidoNivel += numTiempoExcedido
-            numTiempoExcedido = 0            
-
-            if not avanzaNivel:
-                numIntento += 1
+        # Si es Parada
+        elif tipoPregunta == 'Parada' and tiempoSolicitudParada != '-' and writeStop:
+            if not tiempoExcedido:
+                reactionTime = calculateTime(tiempoSolicitudParada, timeStamp)
             else:
-                dataFil = [idSesion[0][-1], idSesion[1][-1], levelPrev,numIntento,  '', '', duration2 , 'Final nivel', '', numPasosPlanificadosNivel, numPasosEjecutadosNivel, numErroresNivel, '', numPreguntasDormirNivel, numUbicacionPlanificadaNivel,  f"{numParadasHechasNivel}/{numParadasHechasNivel + numParadasOmitidasNivel}", numErroresUbicacionNivel, numErroresDormirNivel, numErroresParadaNivel, numTiempoExcedidoNivel]
+                reactionTime = 'Tiempo excedido'
+
+            dataFil = [idNum, sesionNum,level,numIntento, tiempoSolicitudParada , timeStamp,reactionTime, tipoPregunta, preguntaCorrecta]
+            tiempoSolicitudParada = '-'
+            data.append(dataFil) # Anyado al final de la lista de datos
+
+        # Si es Ubicacion lo pongo sinmas
+        elif tipoPregunta == 'Ubicacion' and preguntaCorrecta != '-' :
+            dataFil = [idNum, sesionNum,level,numIntento,  timeStamp, '-','-', tipoPregunta, preguntaCorrecta]
+            data.append(dataFil) # Anyado al final de la lista de datos
+
+        tipoPregunta = '-'
+        preguntaCorrecta = '-'
+        
+        tiempoEventoAnt = timeStamp # Guarda tiempo del evento anterior
+        #print(f"Iteración {i} Num pasos planificados: {numPasosPlanificados}")
+
+        duration = 0
+        escribirMetricas = False
+        # Guarda tiempo inicio sesion  
+        if (not misionEmpezada) or (i == (numEvents-1)):
+            if(tiempoInicioMision != '-'):
+                if (i == (numEvents-1)):
+                    tiempoEventoAnt = timeStamp
+
+                duration = calculateTime(tiempoInicioMision, tiempoEventoAnt)
+
+                # Porcentaje de reglas cumplidas
+                porcentajeReglasCumplidasEjecucion = 100
+
+                if numErroresDormir > 0:
+                    porcentajeReglasCumplidasEjecucion -= 25
+                if numErroresParada  > 0:
+                    porcentajeReglasCumplidasEjecucion -= 25
+                if numErroresUbicacion  > 0:
+                    porcentajeReglasCumplidasEjecucion -= 25
+                
+                # Guarda porcentaje de reglas cumplidas y duracion por mision
+                tiemposMisiones.append([porcentajeReglasCumplidasEjecucion, duration])
+                tiempoInicioMision = '-'
+                misionEmpezada = True
+                
+                nivelCompletado = reglasCumplidas and porcentajeReglasCumplidasEjecucion == 100
+
+                escribirMetricas = True
+
+        else:
+            if(tiempoInicioMision == '-'):
+                tiempoInicioMision = timeStamp
+
+        # Guarda tiempo nivel
+        avanzaNivel = False
+        if(not cambioNivel) or (i == (numEvents -1)):
+            if tiempoInicioNivel != '-':
+                if i == (numEvents - 1):
+                    tiempoEventoAnt = timeStamp
+
+                duration2 = calculateTime(tiempoInicioNivel, tiempoEventoAnt)
+                nivelCompletado = reglasCumplidas and porcentajeReglasCumplidasEjecucion == 100
+                tiemposNiveles.append([levelPrev, nivelCompletado, duration2])
+                tiempoInicioNivel = '-'
+                cambioNivel = True
+                avanzaNivel = True
+        else:
+            if tiempoInicioNivel == '-':
+                tiempoInicioNivel = timeStamp
+
+        if escribirMetricas:
+                # Ayado metricas por mision
+                #paradasHechasText = f"{numParadasHechas}/{numParadasHechas + numParadasOmitidas}"
+                dataFil = [idNum, sesionNum, levelPrev,numIntento,  '', '', duration , 'Final intento', nivelCompletado, numPasosPlanificados, numPasosEjecutados, numErrores, porcentajeReglasCumplidasEjecucion, numPreguntasDormir, numUbicacionPlanificada, f"{numParadasHechas}/{numParadasHechas + numParadasOmitidas}",numErroresUbicacion,numErroresDormir, numErroresParada, numTiempoExcedido]
                 data.append(dataFil) # Anyado al final de la lista de datos
-                avanzaNivel = False
-                numPasosPlanificadosNivel = 0
-                numPasosEjecutadosNivel = 0
-                numErroresNivel = 0
-                numPreguntasDormirNivel = 0
-                numUbicacionPlanificadaNivel = 0
-                numParadasHechasNivel = 0
-                numParadasOmitidasNivel = 0
-                numErroresUbicacionNivel = 0
-                numErroresDormirNivel = 0
-                numErroresParadaNivel = 0
-                numTiempoExcedidoNivel = 0
 
-                numIntento = 1
+                # Pasos planificados
+                numPasosPlanificadosTotales += numPasosPlanificados
+                numPasosPlanificadosNivel += numPasosPlanificados
+                numPasosPlanificados = 0
 
-            escribirMetricas = False
+                # Pasos ejecutados
+                numPasosEjecutadosTotales += numPasosEjecutados
+                numPasosEjecutadosNivel += numPasosEjecutados
+                numPasosEjecutados = 0
 
-dataFil = ['Metricas sesion:']
-data.append(dataFil) # Anyado al final de la lista de datos
-dataFil = [idSesion[0][-1], idSesion[1][-1], len(tiemposNiveles),len(tiemposMisiones),  '', '','', '', '', numPasosPlanificadosTotales, numPasosEjecutadosTotales, numErroresTotales,'', numPreguntasDormirTotales, numUbicacionPlanificadaTotales, f"{numParadasHechasTotales}/{numParadasHechasTotales + numParadasOmitidasTotales}", numErroresUbicacionTotales, numErroresDormirTotales, numErroresParadaTotales, numTiempoExcedidoTotales]
-data.append(dataFil) # Anyado al final de la lista de datos
+                # Errores
+                numErroresTotales += numErrores
+                numErroresNivel += numErrores
+                numErrores = 0
+
+                # Preguntas dormir planificadas
+                numPreguntasDormirTotales += numPreguntasDormir
+                numPreguntasDormirNivel += numPreguntasDormir
+                numPreguntasDormir = 0
+
+                # Preguntas ubicacion planificadas
+                numUbicacionPlanificadaTotales += numUbicacionPlanificada
+                numUbicacionPlanificadaNivel += numUbicacionPlanificada
+                numUbicacionPlanificada = 0
+
+                # Paradas hechas y omitidas
+                numParadasHechasTotales += numParadasHechas
+                numParadasHechasNivel += numParadasHechas
+                numParadasHechas = 0
+
+                numParadasOmitidasTotales += numParadasOmitidas
+                numParadasOmitidasNivel += numParadasOmitidas
+                numParadasOmitidas = 0
+
+                # Errores
+                numErroresUbicacionTotales += numErroresUbicacion
+                numErroresUbicacionNivel += numErroresUbicacion
+                numErroresUbicacion = 0
+
+                numErroresDormirTotales += numErroresDormir
+                numErroresDormirNivel += numErroresDormir
+                numErroresDormir = 0
+
+                numErroresParadaTotales += numErroresParada
+                numErroresParadaNivel += numErroresParada
+                numErroresParada = 0
+
+                numTiempoExcedidoTotales += numTiempoExcedido
+                numTiempoExcedidoNivel += numTiempoExcedido
+                numTiempoExcedido = 0            
+
+                if not avanzaNivel:
+                    numIntento += 1
+                else:
+                    dataFil = [idNum, sesionNum, levelPrev,numIntento,  '', '', duration2 , 'Final nivel', nivelCompletado, numPasosPlanificadosNivel, numPasosEjecutadosNivel, numErroresNivel, '', numPreguntasDormirNivel, numUbicacionPlanificadaNivel,  f"{numParadasHechasNivel}/{numParadasHechasNivel + numParadasOmitidasNivel}", numErroresUbicacionNivel, numErroresDormirNivel, numErroresParadaNivel, numTiempoExcedidoNivel]
+                    data.append(dataFil) # Anyado al final de la lista de datos
+                    avanzaNivel = False
+                    numPasosPlanificadosNivel = 0
+                    numPasosEjecutadosNivel = 0
+                    numErroresNivel = 0
+                    numPreguntasDormirNivel = 0
+                    numUbicacionPlanificadaNivel = 0
+                    numParadasHechasNivel = 0
+                    numParadasOmitidasNivel = 0
+                    numErroresUbicacionNivel = 0
+                    numErroresDormirNivel = 0
+                    numErroresParadaNivel = 0
+                    numTiempoExcedidoNivel = 0
+
+                    numIntento = 1
+
+                escribirMetricas = False
+
+    dataFil = [idNum, sesionNum, len(tiemposNiveles),len(tiemposMisiones),  '', '','', 'Final sesion', '', numPasosPlanificadosTotales, numPasosEjecutadosTotales, numErroresTotales,'', numPreguntasDormirTotales, numUbicacionPlanificadaTotales, f"{numParadasHechasTotales}/{numParadasHechasTotales + numParadasOmitidasTotales}", numErroresUbicacionTotales, numErroresDormirTotales, numErroresParadaTotales, numTiempoExcedidoTotales]
+    data.append(dataFil) # Anyado al final de la lista de datos
 
 
-print(f"Num pasos planificados: {numPasosPlanificadosTotales} \nNum pasos ejecutados: {numPasosEjecutadosTotales} \nNum dormir planificado: {numPreguntasDormirTotales} \nNum ubicacion planificado: {numUbicacionPlanificadaTotales} \nNum paradas hechas: {numParadasHechasTotales}/{numParadasHechasTotales + numParadasOmitidasTotales}") # Esto por usuario
-print(f"\nNum errores: {numErroresTotales} \nNum errores ubi: {numErroresUbicacionTotales} \nNum errores dormir: {numErroresDormirTotales} \nNum errores parada: {numErroresParadaTotales} \nError por tiempo excedido: {numTiempoExcedidoTotales}")
-print(f"\nTiempos misiones: {tiemposMisiones}")
-print(f"Tiempos niveles: {tiemposNiveles}")
+    print(f"Num pasos planificados: {numPasosPlanificadosTotales} \nNum pasos ejecutados: {numPasosEjecutadosTotales} \nNum dormir planificado: {numPreguntasDormirTotales} \nNum ubicacion planificado: {numUbicacionPlanificadaTotales} \nNum paradas hechas: {numParadasHechasTotales}/{numParadasHechasTotales + numParadasOmitidasTotales}") # Esto por usuario
+    print(f"\nNum errores: {numErroresTotales} \nNum errores ubi: {numErroresUbicacionTotales} \nNum errores dormir: {numErroresDormirTotales} \nNum errores parada: {numErroresParadaTotales} \nError por tiempo excedido: {numTiempoExcedidoTotales}")
+    print(f"\nTiempos misiones: {tiemposMisiones}")
+    print(f"Tiempos niveles: {tiemposNiveles}")
 
 # Abro archivo .csv para guardar los datos leidos
 file =  open('../datos.csv', 'w', newline='')
