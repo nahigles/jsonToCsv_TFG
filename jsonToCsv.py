@@ -240,6 +240,24 @@ for name in nombresArchivos:
     level = -1
     levelPrev = -1
 
+    # Reinicio por sesion
+    tipoPregunta = '-'
+    preguntaCorrecta = '-'
+    tiempoSolicitudParada = '-'
+    tiempoSolicitudDormir = '-'
+    timeStamp = ''
+    writeSleep = False
+    writeStop = False
+    tiempoExcedido = False
+    misionEmpezada = False
+    tiempoInicioMision = '-'
+    tiempoEventoAnt = '-'
+    cambioNivel = False
+    tiempoInicioNivel = '-'
+    reglasCumplidas = False
+
+
+
     # Voy anyadiendo siguientes filas
     for i in range(1,numEvents):
 
@@ -353,6 +371,9 @@ for name in nombresArchivos:
         if escribirMetricas:
                 # Ayado metricas por mision
                 #paradasHechasText = f"{numParadasHechas}/{numParadasHechas + numParadasOmitidas}"
+                if idNum == 11:
+                    s = 0
+
                 dataFil = [idNum, sesionNum, levelPrev,numIntento,  '', '', duration , 'Final intento', nivelCompletado, numPasosPlanificados, numPasosEjecutados, numErrores, porcentajeReglasCumplidasEjecucion, numPreguntasDormir, numUbicacionPlanificada, f"{numParadasHechas}/{numParadasHechas + numParadasOmitidas}",numErroresUbicacion,numErroresDormir, numErroresParada, numTiempoExcedido]
                 data.append(dataFil) # Anyado al final de la lista de datos
 
@@ -437,6 +458,21 @@ for name in nombresArchivos:
     print(f"\nNum errores: {numErroresTotales} \nNum errores ubi: {numErroresUbicacionTotales} \nNum errores dormir: {numErroresDormirTotales} \nNum errores parada: {numErroresParadaTotales} \nError por tiempo excedido: {numTiempoExcedidoTotales}")
     print(f"\nTiempos misiones: {tiemposMisiones}")
     print(f"Tiempos niveles: {tiemposNiveles}")
+
+    # Reiniciar contadores de sesion
+    tiemposMisiones = []
+    tiemposNiveles = []
+    numPasosPlanificadosTotales = 0
+    numPasosEjecutadosTotales = 0
+    numErroresTotales = 0
+    numPreguntasDormirTotales = 0
+    numUbicacionPlanificadaTotales = 0
+    numParadasHechasTotales = 0
+    numParadasOmitidasTotales = 0
+    numErroresUbicacionTotales = 0
+    numErroresDormirTotales = 0
+    numErroresParadaTotales = 0
+    numTiempoExcedidoTotales = 0
 
 # Abro archivo .csv para guardar los datos leidos
 file =  open('../datos.csv', 'w', newline='')
