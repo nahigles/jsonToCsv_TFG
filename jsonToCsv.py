@@ -370,10 +370,6 @@ for name in nombresArchivos:
 
         if escribirMetricas:
                 # Ayado metricas por mision
-                #paradasHechasText = f"{numParadasHechas}/{numParadasHechas + numParadasOmitidas}"
-                if idNum == 11:
-                    s = 0
-
                 dataFil = [idNum, sesionNum, levelPrev,numIntento,  '', '', duration , 'Final intento', nivelCompletado, numPasosPlanificados, numPasosEjecutados, numErrores, porcentajeReglasCumplidasEjecucion, numPreguntasDormir, numUbicacionPlanificada, f"{numParadasHechas}/{numParadasHechas + numParadasOmitidas}",numErroresUbicacion,numErroresDormir, numErroresParada, numTiempoExcedido]
                 data.append(dataFil) # Anyado al final de la lista de datos
 
