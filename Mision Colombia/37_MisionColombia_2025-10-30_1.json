@@ -1,0 +1,4166 @@
+{ "37_MisionColombia_2025-10-30_1.json": [
+{
+    "Tiempo": "2025-10-30 15:55:15.139",
+    "Eventos": [
+        { "Paciente y numero de sesion": "Paciente: 37, Numero sesion: 1" }]
+},
+{
+    "Tiempo": "2025-10-30 15:55:15.139",
+    "Eventos": [
+        { "Iniciando juego": "nivel 01" }]
+},
+{
+    "Tiempo": "2025-10-30 15:55:15.146",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:17.452",
+    "Eventos": [
+        { "Planificacion guardada": "Confguración de la planificación guardada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:17.693",
+    "Eventos": [
+        { "Hora de salda seleccionada": "Hora de salida seleccionada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:26.813",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:28.145",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:28.612",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:28.978",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:29.178",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:29.345",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:29.511",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:29.712",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:29.912",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:30.078",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:30.312",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:30.478",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:30.678",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:30.845",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:31.045",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:31.245",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:31.378",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:31.578",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:31.778",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:31.945",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:33.312",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:33.511",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:33.678",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:33.845",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:34.078",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:34.245",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:34.411",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:34.578",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:36.844",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:36.845",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:43.178",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 15:56:43.198",
+    "Eventos": [
+        { "Respuesta de parada NO": "Respuesta de parada NO" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:14.043",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:49.902",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:50.102",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:50.269",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:50.469",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:50.635",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:50.835",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:51.035",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:51.202",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:51.368",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:51.535",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:51.702",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:51.835",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:52.002",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:52.169",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:52.302",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:52.469",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:52.669",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:52.802",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:53.002",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:53.169",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:53.335",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:57:53.502",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:58:37.751",
+    "Eventos": [
+        { "Iniciando juego": "nivel 01" }]
+},
+{
+    "Tiempo": "2025-10-30 15:58:37.754",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 15:58:46.667",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 15:59:00.533",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 15:59:03.499",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 15:59:05.299",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 15:59:07.432",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 15:59:18.193",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 15:59:22.177",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 15:59:27.476",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 15:59:33.570",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 15:59:36.781",
+    "Eventos": [
+        { "Planificacion guardada": "Confguración de la planificación guardada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:59:37.002",
+    "Eventos": [
+        { "Hora de salda seleccionada": "Hora de salida seleccionada" }]
+},
+{
+    "Tiempo": "2025-10-30 15:59:56.179",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 15:59:56.179",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:00:01.313",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:00:01.332",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:00:20.045",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:00:20.045",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:00:23.278",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:00:23.279",
+    "Eventos": [
+        { "Respuesta de parada NO": "Respuesta de parada NO" }]
+},
+{
+    "Tiempo": "2025-10-30 16:00:28.578",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:00:28.579",
+    "Eventos": [
+        { "Ubicacion bien enviada": "Ubicacion bien enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:01:36.050",
+    "Eventos": [
+        { "Iniciando juego": "nivel 01" }]
+},
+{
+    "Tiempo": "2025-10-30 16:01:36.053",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:01:42.358",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:01:54.758",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:02:08.813",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:02:13.890",
+    "Eventos": [
+        { "Planificacion guardada": "Confguración de la planificación guardada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:02:14.097",
+    "Eventos": [
+        { "Hora de salda seleccionada": "Hora de salida seleccionada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:02:27.021",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:02:27.022",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:02:29.522",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:02:29.542",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:02:34.187",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:02:34.188",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:02:37.788",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:02:37.789",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:02:37.789",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:02:42.821",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:02:50.643",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:02:50.643",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:02:53.976",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:02:53.977",
+    "Eventos": [
+        { "Respuesta de parada NO": "Respuesta de parada NO" }]
+},
+{
+    "Tiempo": "2025-10-30 16:03:17.875",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:03:17.876",
+    "Eventos": [
+        { "Ubicacion bien enviada": "Ubicacion bien enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:04:27.053",
+    "Eventos": [
+        { "Iniciando juego": "nivel 01" }]
+},
+{
+    "Tiempo": "2025-10-30 16:04:27.056",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:04:56.432",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:05:03.132",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:05:06.265",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:05:19.620",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:05:21.420",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:05:30.191",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:05:34.080",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:05:44.213",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:05:50.179",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:05:52.184",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:06:11.012",
+    "Eventos": [
+        { "Planificacion guardada": "Confguración de la planificación guardada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:06:11.239",
+    "Eventos": [
+        { "Hora de salda seleccionada": "Hora de salida seleccionada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:06:13.210",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:06:13.211",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:06:16.976",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:06:16.995",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:06:16.995",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:06:22.010",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:06:32.970",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:06:32.970",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:06:35.204",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:06:35.205",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:06:46.604",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:06:46.605",
+    "Eventos": [
+        { "Ubicacion bien enviada": "Ubicacion bien enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:06:47.703",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:06:47.704",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:06:51.070",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:06:51.071",
+    "Eventos": [
+        { "Respuesta de parada NO": "Respuesta de parada NO" }]
+},
+{
+    "Tiempo": "2025-10-30 16:07:03.569",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:07:03.570",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:07:06.569",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:07:06.570",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:07:19.068",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:07:19.069",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:07:20.402",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:07:20.403",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:07:41.867",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:07:41.868",
+    "Eventos": [
+        { "Ubicacion bien enviada": "Ubicacion bien enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:07:42.167",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:08:37.180",
+    "Eventos": [
+        { "Iniciando juego": "nivel 02" }]
+},
+{
+    "Tiempo": "2025-10-30 16:08:37.183",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:09:03.587",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:09:05.086",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:09:10.086",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:09:12.919",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:09:24.947",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:09:26.747",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:09:33.280",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:09:44.057",
+    "Eventos": [
+        { "Planificacion guardada": "Confguración de la planificación guardada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:09:44.283",
+    "Eventos": [
+        { "Hora de salda seleccionada": "Hora de salida seleccionada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:03.488",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:03.489",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:07.521",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:07.541",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:26.287",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:26.287",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:30.754",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:30.755",
+    "Eventos": [
+        { "Respuesta de parada NO": "Respuesta de parada NO" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:38.554",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:38.554",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:38.555",
+    "Eventos": [
+        { "Envio de ubicación omitido": "Envio de ubicacion omitido" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:42.453",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:42.454",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:42.454",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:47.486",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:49.053",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:49.053",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:49.919",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:49.920",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:49.921",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:54.952",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:57.919",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:58.753",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:58.952",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:59.152",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:59.319",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:59.486",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:59.686",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:10:59.886",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:00.052",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:00.219",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:00.419",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:00.586",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:00.952",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:01.152",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:01.319",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:01.519",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:01.719",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:02.085",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:02.418",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:02.551",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:02.619",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:02.784",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:02.851",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:03.018",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:03.084",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:03.251",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:03.351",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:03.518",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:03.584",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:03.718",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:04.190",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:04.291",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:04.323",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:04.323",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:04.456",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:04.556",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:04.690",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:05.190",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:05.290",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:05.723",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:05.790",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:05.957",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:06.157",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:06.324",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:06.491",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:06.657",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:06.863",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:07.363",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:07.364",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:08.263",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:08.430",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:08.596",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:08.796",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:08.963",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:09.163",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:09.296",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:09.496",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:09.663",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:09.830",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:10.030",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:10.196",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:10.496",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:10.729",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:10.863",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:11.029",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:11.230",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:11.396",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:11.596",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:11.763",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:11.963",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:12.129",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:12.329",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:12.529",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:12.697",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:12.895",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:13.196",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:13.396",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:13.563",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:13.696",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:26.129",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:26.129",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:28.995",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:28.996",
+    "Eventos": [
+        { "Respuesta de parada NO": "Respuesta de parada NO" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:55.828",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:55.994",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:56.161",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:56.294",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:56.494",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:56.661",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:56.827",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:58.761",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:58.961",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:59.127",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:59.327",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:59.494",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:59.660",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:11:59.893",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:00.193",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:00.360",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:00.726",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:01.126",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:01.259",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:01.359",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:01.493",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:01.593",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:01.726",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:01.826",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:01.993",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:02.093",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:02.226",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:02.365",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:02.465",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:02.565",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:02.698",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:02.831",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:02.998",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:03.066",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:03.232",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:03.266",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:03.331",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:03.599",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:03.766",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:03.933",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:04.099",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:04.266",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:04.432",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:04.566",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:04.732",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:04.899",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:05.099",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:05.266",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:05.399",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:05.599",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:05.766",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:05.767",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:05.966",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:05.967",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:06.133",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:06.134",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:06.299",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:06.300",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:06.466",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:06.666",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:06.667",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:06.799",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:06.833",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:06.966",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:06.999",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:07.132",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:07.166",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:07.333",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:07.334",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:07.499",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:07.500",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:07.666",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:07.667",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:07.866",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:07.868",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:08.033",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:08.034",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:08.199",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:08.201",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:08.366",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:08.398",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:08.532",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:08.534",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:08.698",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:08.893",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:08.927",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:11.193",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:11.393",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:11.627",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:11.826",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:12.137",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:12.437",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:12.671",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:12.971",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:13.271",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:13.438",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:13.638",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:13.837",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:13.971",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:14.137",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:14.271",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:14.403",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:14.538",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:14.671",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:14.769",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:14.805",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:14.937",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:14.971",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:15.137",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:15.139",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:15.238",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:15.270",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:15.404",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:15.406",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:15.571",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:15.573",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:15.704",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:15.707",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:15.871",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:15.872",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:16.037",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:16.039",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:16.172",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:16.203",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:16.275",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:16.343",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:16.442",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:16.509",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:16.511",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:16.608",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:16.609",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:16.677",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:16.775",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:16.809",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:16.844",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:16.910",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:16.911",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:17.010",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:17.011",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:17.175",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:17.176",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:17.242",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:17.342",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:17.342",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:17.476",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:17.609",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:17.810",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:17.811",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:18.110",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:18.111",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:18.275",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:18.343",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:18.344",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:18.442",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:18.443",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:18.510",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:18.743",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:18.744",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:18.876",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:21.043",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:22.248",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:22.782",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:22.915",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:23.115",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:23.248",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:23.520",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:23.687",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:23.820",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:23.854",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:23.953",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:23.954",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:24.087",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:24.088",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:52.336",
+    "Eventos": [
+        { "Iniciando juego": "nivel 03" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:52.339",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:12:59.391",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:01.727",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:04.293",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:14.095",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:18.726",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:23.126",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:30.259",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:31.626",
+    "Eventos": [
+        { "Planificacion guardada": "Confguración de la planificación guardada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:31.846",
+    "Eventos": [
+        { "Hora de salda seleccionada": "Hora de salida seleccionada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:33.873",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:33.874",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:37.641",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:37.676",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:37.676",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:42.672",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:45.806",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:45.806",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:48.339",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:48.339",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:48.340",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:53.372",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:54.938",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:54.939",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:58.840",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:13:58.841",
+    "Eventos": [
+        { "Ubicacion bien enviada": "Ubicacion bien enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:14:00.205",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:14:01.405",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:14:01.407",
+    "Eventos": [
+        { "Respuesta de parada NO": "Respuesta de parada NO" }]
+},
+{
+    "Tiempo": "2025-10-30 16:14:06.066",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:14:06.066",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:14:07.766",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:14:07.768",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:14:12.426",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:14:12.427",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:14:15.261",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:14:15.263",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:14:19.898",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:14:19.899",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:14:21.164",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:14:21.165",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:14:43.721",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:14:43.721",
+    "Eventos": [
+        { "Ubicacion bien enviada": "Ubicacion bien enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:15:30.335",
+    "Eventos": [
+        { "Iniciando juego": "nivel 02" }]
+},
+{
+    "Tiempo": "2025-10-30 16:15:30.338",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:15:52.730",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:16:05.368",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:16:20.634",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:16:29.789",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:16:31.423",
+    "Eventos": [
+        { "Planificacion guardada": "Confguración de la planificación guardada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:16:31.640",
+    "Eventos": [
+        { "Hora de salda seleccionada": "Hora de salida seleccionada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:16:31.642",
+    "Eventos": [
+        { "Envio de ubicación omitido": "Envio de ubicacion omitido" }]
+},
+{
+    "Tiempo": "2025-10-30 16:16:33.619",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:16:33.620",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:16:34.088",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:16:34.888",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:16:38.687",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, no se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:16:38.688",
+    "Eventos": [
+        { "Tiempo de respuesta excedido": "Tiempo de respuesta excedido" }]
+},
+{
+    "Tiempo": "2025-10-30 16:16:55.918",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:16:55.919",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:16:57.553",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:16:57.590",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:16:57.590",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:02.584",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:04.151",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:04.152",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:06.386",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:06.389",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:10.618",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:10.785",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:10.985",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:11.151",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:11.350",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:11.651",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:11.851",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:12.020",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:12.184",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:12.352",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:12.354",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:12.518",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:12.521",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:12.651",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:12.685",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:12.852",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:12.854",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:13.017",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:13.018",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:13.218",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:13.220",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:13.385",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:13.387",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:13.552",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:13.554",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:13.751",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:13.752",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:13.950",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:13.951",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:14.152",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:14.153",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:14.350",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:14.351",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:14.551",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:14.584",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:14.883",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:15.217",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:15.385",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:15.584",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:15.851",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:16.052",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:16.317",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:16.485",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:16.683",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:16.885",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:17.211",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:18.145",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:18.445",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:18.613",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:18.811",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:19.112",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:19.313",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:19.578",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:19.713",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:19.911",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:20.112",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:20.378",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:20.552",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:20.750",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:20.983",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:21.151",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:21.350",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:22.285",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:22.452",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:23.512",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:23.711",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:23.913",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:24.211",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:24.379",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:24.645",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:24.812",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:24.978",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:25.110",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:25.110",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:27.073",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:27.075",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:30.433",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:30.633",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:30.967",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:31.233",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:31.402",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:31.634",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:31.866",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:32.102",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:32.366",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:32.566",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:32.832",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:32.965",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:33.099",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:33.199",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:33.365",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:33.465",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:33.599",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:33.732",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:33.865",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:34.032",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:34.165",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:34.299",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:34.466",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:34.532",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:34.732",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:34.832",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:35.032",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:35.068",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:35.265",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:35.332",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:35.499",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:35.765",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:35.865",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:36.098",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:36.234",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:36.365",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:36.432",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:36.632",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:36.765",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:36.799",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:36.899",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:37.035",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:37.165",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:37.234",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:37.237",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:37.565",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:37.566",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:44.700",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:44.899",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:45.967",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:47.166",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:47.333",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:47.955",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:48.121",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:49.021",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:49.188",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:49.322",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:50.221",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:50.388",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:50.548",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:51.116",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:51.282",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:51.450",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:52.083",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:52.250",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:52.382",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:53.116",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:53.282",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:53.450",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:54.150",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:54.317",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:54.484",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:55.117",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:55.282",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:55.416",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:56.017",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:56.183",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:56.350",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:56.983",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:57.149",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:57.316",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:57.982",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:58.183",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:58.349",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:58.883",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:59.082",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:59.249",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:17:59.811",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:00.010",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:00.143",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:00.745",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:00.877",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:01.711",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:01.911",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:02.710",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:03.244",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:04.178",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:04.510",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:04.711",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:05.510",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:05.677",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:05.843",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:06.343",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:06.510",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:06.677",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:07.109",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:07.277",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:08.077",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:08.744",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:08.875",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:09.044",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:10.244",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:10.410",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:10.576",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:10.743",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:23.310",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:23.743",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:23.944",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:24.110",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:24.276",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:24.408",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:24.610",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:24.775",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:24.942",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:18:25.109",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:19:09.447",
+    "Eventos": [
+        { "Iniciando juego": "nivel 02" }]
+},
+{
+    "Tiempo": "2025-10-30 16:19:09.450",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:19:14.320",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:19:24.986",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:19:38.941",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:19:45.241",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:19:52.580",
+    "Eventos": [
+        { "Se cumplen las reglas": "Se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:19:55.844",
+    "Eventos": [
+        { "Planificacion guardada": "Confguración de la planificación guardada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:19:56.069",
+    "Eventos": [
+        { "Hora de salda seleccionada": "Hora de salida seleccionada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:19:58.026",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:19:58.027",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:00.027",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:00.057",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:00.058",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:05.059",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:22.292",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:22.293",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:23.725",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:23.727",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:23.728",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:28.758",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:30.325",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:30.326",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:33.393",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:33.395",
+    "Eventos": [
+        { "Respuesta de parada NO": "Respuesta de parada NO" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:51.425",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:51.425",
+    "Eventos": [
+        { "Ubicacion bien enviada": "Ubicacion bien enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:52.157",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:52.158",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:55.024",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:20:55.027",
+    "Eventos": [
+        { "Respuesta de parada NO": "Respuesta de parada NO" }]
+},
+{
+    "Tiempo": "2025-10-30 16:21:13.728",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:21:13.729",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:21:17.929",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:21:17.930",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:21:36.694",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:21:36.695",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:21:38.126",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:21:38.127",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:22:20.979",
+    "Eventos": [
+        { "Iniciando juego": "nivel 03" }]
+},
+{
+    "Tiempo": "2025-10-30 16:22:20.982",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:22:35.677",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:22:39.345",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:22:42.532",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:22:46.505",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:22:50.663",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:22:57.410",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:07.642",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:09.409",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:11.175",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:26.214",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:28.680",
+    "Eventos": [
+        { "Se cumplen las reglas": "Se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:33.406",
+    "Eventos": [
+        { "Se cumplen las reglas": "Se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:38.346",
+    "Eventos": [
+        { "Se cumplen las reglas": "Se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:40.280",
+    "Eventos": [
+        { "Planificacion guardada": "Confguración de la planificación guardada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:40.514",
+    "Eventos": [
+        { "Hora de salda seleccionada": "Hora de salida seleccionada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:42.526",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:42.527",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:46.492",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:46.512",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:46.512",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:51.525",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:53.092",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:53.093",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:55.794",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:55.796",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:57.326",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:23:57.327",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:01.226",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:01.228",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:01.229",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:06.259",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:07.825",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:07.826",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:14.093",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:14.095",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:14.096",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:19.125",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:19.126",
+    "Eventos": [
+        { "Envio de ubicación omitido": "Envio de ubicacion omitido" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:20.690",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:20.691",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:20.692",
+    "Eventos": [
+        { "Envio de ubicación omitido": "Envio de ubicacion omitido" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:23.558",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:23.577",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:25.091",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:25.092",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:26.091",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:26.092",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:27.624",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:27.625",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:28.192",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:28.194",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:24:50.341",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:25:36.572",
+    "Eventos": [
+        { "Iniciando juego": "nivel 02" }]
+},
+{
+    "Tiempo": "2025-10-30 16:25:36.575",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:25:52.217",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:25:53.850",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:25:58.674",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:25:59.941",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:26:18.144",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:26:20.444",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:26:41.298",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:26:48.664",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:26:51.498",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-10-30 16:26:59.486",
+    "Eventos": [
+        { "Planificacion guardada": "Confguración de la planificación guardada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:26:59.705",
+    "Eventos": [
+        { "Hora de salda seleccionada": "Hora de salida seleccionada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:18.899",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:18.900",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:20.500",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:20.536",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:37.698",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:37.699",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:38.400",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:39.466",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:39.467",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:39.468",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:44.497",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:46.065",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:46.065",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:48.699",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:48.700",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:54.930",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:54.930",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:57.598",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:57.600",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:57.601",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-10-30 16:27:58.231",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-10-30 16:28:02.631",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+}]}

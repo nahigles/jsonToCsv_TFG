@@ -1,0 +1,1261 @@
+{ "11_MisionColombia_2025-11-13_3.json": [
+{
+    "Tiempo": "2025-11-13 14:13:54.844",
+    "Eventos": [
+        { "Paciente y numero de sesion": "Paciente: 11, Numero sesion: 3" }]
+},
+{
+    "Tiempo": "2025-11-13 14:13:54.844",
+    "Eventos": [
+        { "Iniciando juego": "nivel 01" }]
+},
+{
+    "Tiempo": "2025-11-13 14:13:54.853",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:14:28.291",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:14:37.746",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:14:40.112",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:14:56.345",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:14:59.089",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:15:12.238",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:15:14.499",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:15:19.610",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:15:21.332",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:15:24.066",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:15:27.166",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:15:34.743",
+    "Eventos": [
+        { "Se cumplen las reglas": "Se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:15:39.070",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:15:41.670",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:15:44.771",
+    "Eventos": [
+        { "Se cumplen las reglas": "Se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:15:47.382",
+    "Eventos": [
+        { "Planificacion guardada": "Confguración de la planificación guardada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:15:47.629",
+    "Eventos": [
+        { "Hora de salda seleccionada": "Hora de salida seleccionada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:15:54.267",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:15:54.268",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:15:56.335",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:15:56.354",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:15:56.355",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:01.346",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:02.912",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:02.913",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:04.779",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:04.780",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:11.012",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:11.012",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:15.346",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:15.347",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:21.578",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:21.579",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:23.212",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:23.213",
+    "Eventos": [
+        { "Respuesta de parada NO": "Respuesta de parada NO" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:24.745",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:24.745",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:25.912",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:25.913",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:25.913",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:30.945",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:30.945",
+    "Eventos": [
+        { "Envio de ubicación omitido": "Envio de ubicacion omitido" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:36.213",
+    "Eventos": [
+        { "Iniciando juego": "nivel 01" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:36.216",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:43.812",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:57.228",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:16:59.694",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:02.361",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:04.394",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:12.988",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:15.049",
+    "Eventos": [
+        { "Se cumplen las reglas": "Se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:17.416",
+    "Eventos": [
+        { "Planificacion guardada": "Confguración de la planificación guardada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:17.629",
+    "Eventos": [
+        { "Hora de salda seleccionada": "Hora de salida seleccionada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:24.297",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:24.298",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:25.898",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:25.917",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:32.130",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:32.131",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:34.097",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:34.098",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:37.197",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:37.197",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:38.331",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:38.331",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:38.332",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:43.363",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:44.930",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:44.930",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:54.671",
+    "Eventos": [
+        { "Iniciando juego": "nivel 01" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:54.674",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:17:57.047",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:01.708",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:04.469",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:06.158",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:07.991",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:08.924",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:10.757",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:13.435",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:15.558",
+    "Eventos": [
+        { "Se cumplen las reglas": "Se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:20.357",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:24.057",
+    "Eventos": [
+        { "Se cumplen las reglas": "Se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:28.802",
+    "Eventos": [
+        { "Planificacion guardada": "Confguración de la planificación guardada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:29.030",
+    "Eventos": [
+        { "Hora de salda seleccionada": "Hora de salida seleccionada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:35.699",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:35.700",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:36.633",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:36.653",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:42.866",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:42.866",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:43.966",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:43.980",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:45.499",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:45.500",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:46.733",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:46.734",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:46.734",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:51.766",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:56.465",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:56.466",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:57.499",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:18:57.500",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:19:03.731",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:19:03.732",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:19:04.732",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:19:04.733",
+    "Eventos": [
+        { "Ubicacion bien enviada": "Ubicacion bien enviada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:19:05.499",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:19:05.499",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:19:16.431",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:19:16.431",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:19:23.864",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:19:23.865",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:19:23.865",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:19:28.897",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:19:48.496",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:19:48.497",
+    "Eventos": [
+        { "Ubicacion bien enviada": "Ubicacion bien enviada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:20:12.099",
+    "Eventos": [
+        { "Iniciando juego": "nivel 02" }]
+},
+{
+    "Tiempo": "2025-11-13 14:20:12.102",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:20:16.362",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:20:20.956",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:20:27.690",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:20:30.878",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:20:34.578",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:20:41.022",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:20:43.255",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:20:44.289",
+    "Eventos": [
+        { "Se cumplen las reglas": "Se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:20:53.750",
+    "Eventos": [
+        { "Planificacion guardada": "Confguración de la planificación guardada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:20:53.980",
+    "Eventos": [
+        { "Hora de salda seleccionada": "Hora de salida seleccionada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:21:13.415",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:21:13.415",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:21:15.848",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:21:15.868",
+    "Eventos": [
+        { "Respuesta de parada NO": "Respuesta de parada NO" }]
+},
+{
+    "Tiempo": "2025-11-13 14:21:34.580",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:21:34.580",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:21:35.213",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:21:35.214",
+    "Eventos": [
+        { "Ubicacion bien enviada": "Ubicacion bien enviada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:21:36.880",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:21:36.881",
+    "Eventos": [
+        { "Respuesta de parada NO": "Respuesta de parada NO" }]
+},
+{
+    "Tiempo": "2025-11-13 14:21:55.645",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:21:55.646",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:21:56.579",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:21:56.580",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:21:56.580",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:22:01.611",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:22:03.178",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:22:03.179",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:22:04.745",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:22:04.746",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:22:20.378",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:22:20.378",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:22:21.377",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:22:21.378",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:22:21.379",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:22:26.411",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:22:29.544",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:22:29.544",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:22:32.544",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:22:32.545",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:22:38.710",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:22:38.711",
+    "Eventos": [
+        { "Ubicacion bien enviada": "Ubicacion bien enviada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:23:53.796",
+    "Eventos": [
+        { "Iniciando juego": "nivel 03" }]
+},
+{
+    "Tiempo": "2025-11-13 14:23:53.799",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:23:59.557",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:24:05.057",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:24:12.445",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:24:20.545",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:24:22.934",
+    "Eventos": [
+        { "Se cumplen las reglas": "Se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:24:26.967",
+    "Eventos": [
+        { "Se cumplen las reglas": "Se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:24:32.094",
+    "Eventos": [
+        { "Se cumplen las reglas": "Se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:24:35.560",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:24:47.860",
+    "Eventos": [
+        { "Se cumplen las reglas": "Se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:02.960",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:04.554",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:14.753",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:31.552",
+    "Eventos": [
+        { "Se cumplen las reglas": "Se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:32.852",
+    "Eventos": [
+        { "Planificacion guardada": "Confguración de la planificación guardada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:33.069",
+    "Eventos": [
+        { "Hora de salda seleccionada": "Hora de salida seleccionada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:38.223",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:38.224",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:40.590",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:40.610",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:40.610",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:45.623",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:47.156",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:47.157",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:49.490",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:49.491",
+    "Eventos": [
+        { "Respuesta de parada NO": "Respuesta de parada NO" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:54.156",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:54.156",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:56.156",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:25:56.157",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:00.822",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:00.823",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:02.456",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:02.457",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:07.122",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:07.122",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:07.123",
+    "Eventos": [
+        { "Envio de ubicación omitido": "Envio de ubicacion omitido" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:08.722",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:08.723",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:14.354",
+    "Eventos": [
+        { "Iniciando juego": "nivel 03" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:14.357",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:16.123",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:18.145",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:20.511",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:22.911",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:25.544",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:27.211",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:29.611",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:31.244",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:35.277",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:55.037",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:58.170",
+    "Eventos": [
+        { "Se cumplen las reglas": "Se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:26:59.971",
+    "Eventos": [
+        { "Planificacion guardada": "Confguración de la planificación guardada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:00.190",
+    "Eventos": [
+        { "Hora de salda seleccionada": "Hora de salida seleccionada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:05.352",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:05.353",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:06.686",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:06.705",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:06.706",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:11.719",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:13.285",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:13.286",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:15.419",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:15.420",
+    "Eventos": [
+        { "Respuesta de parada NO": "Respuesta de parada NO" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:20.085",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:20.086",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:21.619",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:21.620",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:26.284",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:26.285",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:27.718",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:27.719",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:28.151",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:28.152",
+    "Eventos": [
+        { "Ubicacion bien enviada": "Ubicacion bien enviada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:32.384",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:32.385",
+    "Eventos": [
+        { "Solicitud de parada": "Pregunta de parada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:33.718",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:33.719",
+    "Eventos": [
+        { "Respuesta de parada SI": "Respuesta de parada SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:36.784",
+    "Eventos": [
+        { "Empieza pregunta y decision": "Pregunta inicio" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:36.784",
+    "Eventos": [
+        { "Solicitud de dormir": "Pregunta de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:38.151",
+    "Eventos": [
+        { "Termina pregunta y decision": "Pregunta final, se ha contestado" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:38.152",
+    "Eventos": [
+        { "Respuesta de dormir SI": "Respuesta de dormir SI" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:38.152",
+    "Eventos": [
+        { "Inicio de dormir": "Comienza a dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:43.183",
+    "Eventos": [
+        { "Final de dormir": "Termina de dormir" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:57.917",
+    "Eventos": [
+        { "Ubcacion enviada": "Ubicacion enviada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:27:57.917",
+    "Eventos": [
+        { "Ubicacion bien enviada": "Ubicacion bien enviada" }]
+},
+{
+    "Tiempo": "2025-11-13 14:29:18.329",
+    "Eventos": [
+        { "Iniciando juego": "nivel 01" }]
+},
+{
+    "Tiempo": "2025-11-13 14:29:18.332",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+}]}

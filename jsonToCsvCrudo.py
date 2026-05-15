@@ -80,7 +80,6 @@ def MCEvent(i, e, eValue, info):
 
     return tipoPregunta, cambioNivel, level, levelPrev
 
-
 def calculateTime(t1,t2):
     t1s = t1.split(':')
     t2s = t2.split(':')
@@ -89,13 +88,18 @@ def calculateTime(t1,t2):
     t = round(t, 6)
     return t
 
+def getDateTime(txt):
+    splitT = txt.split(" ")
+    date = splitT[0]
+    time = splitT[1]
 
-ruta =  "../Mision Colombia/"
+    return date,time
+
+ruta =  "./Mision Colombia/"
 
 nombresArchivos = os.listdir(ruta)
 
 nArchivos = len(nombresArchivos)
-print(f"Numero de archivos: {nArchivos}")
 
 # Datos con los titulos de cada columna
 data = [['ID','Sesion', 'Nivel', 'Intento', 'Fecha', 'Tiempo', 'Evento']]
@@ -119,26 +123,17 @@ for name in nombresArchivos:
     levelPrev = -1
 
     txt = datos_JSON[name][0]["Tiempo"]
-    splitT = txt.split(" ")
-    date = splitT[0]
-    timeStamp = splitT[1]
+    date, timeStamp = getDateTime(txt)
 
     dataFil = [idNum, sesionNum,'', '', date, timeStamp, 'Paciente y número de sesion guardado']
     data.append(dataFil) # Anyado al final de la lista de datos
-
-    # Reinicio por sesion
-    tipoPregunta = '-'
-    timeStamp = ''   
-    cambioNivel = False
 
     # Voy anyadiendo siguientes filas
     for i in range(1,numEvents):
 
         # Fecha y Tiempo
         txt = datos_JSON[name][i]["Tiempo"]
-        splitT = txt.split(" ")
-        date = splitT[0]
-        timeStamp = splitT[1]
+        date, timeStamp = getDateTime(txt)
 
         eventName = list(datos_JSON[name][i]["Eventos"][0].keys())[0]
         eventValue = list(datos_JSON[name][i]["Eventos"][0].values())[0]
@@ -157,11 +152,9 @@ for name in nombresArchivos:
 
         dataFil = [idNum, sesionNum,level, numIntento, date, timeStamp, tipoPregunta]
         data.append(dataFil) # Anyado al final de la lista de datos
-
-        tipoPregunta = '-'
        
 # Abro archivo .csv para guardar los datos leidos
-file =  open('../datosCrudos.csv', 'w', newline='')
+file =  open('./datosCrudos.csv', 'w', newline='')
 writer = csv.writer(file)
 writer.writerows(data)
 file.close()
