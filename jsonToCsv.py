@@ -208,7 +208,8 @@ def calculateTime(t1,t2):
     t =(float(t2s[0]) - float(t1s[0]))*60*60 + (float(t2s[1]) - float(t1s[1]))*60.0 + (float(t2s[2]) - float(t1s[2]))
 
     t = round(t, 6)
-    return t
+    s = str(t)
+    return s
 
 
 ruta =  "../Mision Colombia/"
