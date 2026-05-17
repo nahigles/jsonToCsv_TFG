@@ -1,6 +1,7 @@
 import csv
 import json
 import os
+import pandas as pd
 
 tipoPregunta = '-'
 timeStamp = ''
@@ -159,4 +160,5 @@ writer = csv.writer(file)
 writer.writerows(data)
 file.close()
 
-
+df = pd.read_csv("./datosCrudos.csv", encoding = 'unicode_escape')
+df.to_excel("datosCrudos.xlsx", sheet_name="Sheet1", index=False)
