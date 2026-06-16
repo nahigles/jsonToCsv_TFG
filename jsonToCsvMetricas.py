@@ -18,6 +18,29 @@ writeSleep = False
 writeStop = False
 tiempoExcedido = False
 
+# Datos por intento
+tiempoInicioIntento = ''
+tiempoFinalIntento = ''
+tiempoDuracionIntento = ''
+completado = False
+reglasPlanificacionCumplidas = False
+reglasEjecucionCumplidas = 100
+numPasosPlanificados = 0
+numPasosEjecutados = 0
+numErroresEjecucion = 0
+numDormirPlanificado = 0
+correctosDormir = 0
+erroresDormir = 0
+numUbicacionPlanificado = 0
+correctosUbicacion = 0
+erroresUbicacion = 0
+paradasPosibles = 0
+paradasRealizadas = 0
+erroresParadaTiempoExcedido = 0
+erroresTiempoExcedido = 0
+
+intentoTerminado = False
+
 def MCEvent(i, e, eValue, info): 
 
     tipoEvento = info[0]
@@ -89,6 +112,11 @@ def MCEvent(i, e, eValue, info):
     elif e == "Tiempo de respuesta excedido":
         tipoEvento = 'Tiempo excedido'
         preguntaCorrecta = 'Erroneo'
+        if tiempoSolicitudDormir != '-':
+            tipoPregunta = 'Dormir'
+        elif tiempoSolicitudParada != '-':
+            tipoPregunta = 'Parada'
+        
 
     elif e == "Se cumplen las reglas":
         tipoEvento = 'Reglas cumplidas'
@@ -119,8 +147,17 @@ def getDateTime(txt):
     splitT = txt.split(" ")
     date = splitT[0]
     time = splitT[1]
-
     return date,time
+
+def saveCsvExcel(fileName, infoToSave):
+    file =  open(fileName + '.csv', 'w', newline='')
+    writer = csv.writer(file)
+    writer.writerows(infoToSave)
+    file.close()
+
+    df = pd.read_csv(fileName + ".csv", encoding = 'unicode_escape')
+    df.to_excel(fileName + ".xlsx", sheet_name="Sheet1", index=False)
+
 
 ruta =  "./Mision Colombia/"
 
@@ -130,7 +167,8 @@ nArchivos = len(nombresArchivos)
 
 # Datos con los titulos de cada columna
 data = [['ID','Sesion', 'Nivel', 'Intento', 'Fecha', 'Tiempo', 'Evento']]
-dataPreguntas = [['ID','Sesion', 'Nivel', 'Intento', 'Tipo', 'Tiempo inicio', 'Tiempo respuesta', 'Tiempo reaccion', 'Respuesta']]
+dataPreguntas = [['ID','Sesion', 'Nivel', 'Intento', 'Tipo', 'Tiempo inicio', 'Tiempo respuesta', 'Tiempo reaccion(s)', 'Respuesta']]
+dataIntentos = [['ID','Sesion', 'Nivel', 'Intento','Tiempo inicio', 'Tiempo final', 'Tiempo duracion', 'Completado', 'Reglas planificacion cumplidas', '%Reglas respetadas ejecucion', 'Pasos planificados','Pasos ejecutados','Errores ejecucion','Num dormir planificado','Correctos dormir', 'Errores dormir','Num ubicacion planificado','Correctos ubicacion','Errores ubicacion', 'Paradas posibles','Paradas realizadas', 'Errores parada por tiempo excedido', 'Num errores por tiempo excedido']]
 
 for name in nombresArchivos:
 
@@ -177,51 +215,67 @@ for name in nombresArchivos:
         preguntaCorrecta = infoEvent[7]
         
         if tipoEvento == 'Inicio juego':
+            # Escribir aqui si se puede
+            if intentoTerminado:
+                dataIntentos.append(dataFilIntento)
+
             if cambioNivel:
                 numIntento = 1
             else:
                 numIntento += 1
+            
+            # Guardo Intento
+            dataFilIntento = [idNum, sesionNum, level, numIntento,timeStamp, 'Tiempo final', 'Tiempo duracion', 'Completado', 'Reglas planificacion cumplidas', '%Reglas respetadas ejecucion', 'Pasos planificados','Pasos ejecutados','Errores ejecucion','Num dormir planificado','Correctos dormir', 'Errores dormir','Num ubicacion planificado','Correctos ubicacion','Errores ubicacion', 'Paradas posibles','Paradas realizadas', 'Errores parada por tiempo excedido', 'Num errores por tiempo excedido']
+            #dataIntentos.append(dataFilIntento)
+            # Guardo datos para anyadir a dataIntento
 
         # Guardo datos crudos de los eventos
         dataFil = [idNum, sesionNum,level, numIntento, date, timeStamp, tipoEvento]
         data.append(dataFil) # Anyado al final de la lista de datos
 
         if tipoPregunta != '-':
+            # Si el evento es tipo ubicacion
             if tipoPregunta == 'Ubicacion':
                 dataFil = [idNum, sesionNum, level, numIntento, tipoPregunta,timeStamp, '','', preguntaCorrecta]
+                dataPreguntas.append(dataFil)
             else:
+                # Si el evento es tipo Dormir
                 if tiempoSolicitudDormir != '-':
                     tiempoReaccion = calculateTime(tiempoSolicitudDormir, timeStamp)
-                    dataFil  = [idNum, sesionNum, level, numIntento, tipoPregunta, tiempoSolicitudDormir,timeStamp,tiempoReaccion, preguntaCorrecta]
+                    if tipoEvento != 'Tiempo excedido':
+                        dataFil  = [idNum, sesionNum, level, numIntento, tipoPregunta, tiempoSolicitudDormir,timeStamp,tiempoReaccion, preguntaCorrecta]
+                    else:
+                        dataFil  = [idNum, sesionNum, level, numIntento, tipoPregunta, tiempoSolicitudDormir,'','Tiempo excedido', preguntaCorrecta]
+
                     tiempoSolicitudDormir = '-'
                     dataPreguntas.append(dataFil)
 
+                # Si el evento es tipo Ubicacion
                 elif tiempoSolicitudParada != '-':
                     tiempoReaccion = calculateTime(tiempoSolicitudParada, timeStamp)
-                    dataFil  = [idNum, sesionNum, level, numIntento, tipoPregunta, tiempoSolicitudParada,timeStamp,tiempoReaccion, preguntaCorrecta]
-                    tiempoSolicitudParada = '-'
-            
-            dataPreguntas.append(dataFil)
+                    if tipoEvento != 'Tiempo excedido':
+                        dataFil  = [idNum, sesionNum, level, numIntento, tipoPregunta, tiempoSolicitudParada,timeStamp,tiempoReaccion, preguntaCorrecta]
+                    else:
+                        dataFil  = [idNum, sesionNum, level, numIntento, tipoPregunta, tiempoSolicitudParada,'','Tiempo excedido', preguntaCorrecta]
 
+                    tiempoSolicitudParada = '-'
+                    dataPreguntas.append(dataFil)      
+
+
+        # Guardo datos del intento
+        tiempoDuracionIntento = calculateTime(dataFilIntento[4], timeStamp)
+        dataFilIntento = [dataFilIntento[0], dataFilIntento[1], dataFilIntento[2], dataFilIntento[3],dataFilIntento[4], timeStamp, tiempoDuracionIntento, 'Complet', 'Reg plan cumpl', '%Reglas resp ej', 'Planificados','Pejecutados','Err ej','N dormir plan','Corrct dormir', 'Err dormir','N ubi plan','Corrct ubicacion','Errores ubicacion', 'Paradas posibles','Paradas realizadas', 'Errores parada por tiempo excedido', 'Num errores por tiempo excedido']
+        dataIntentos.append(dataFilIntento)
+
+        # Reinicio tipo pregunta y preguntacorrecta
         tipoPregunta = '-'
         preguntaCorrecta = '-'
        
 # DATOS CRUDOS
-# Abro archivo .csv para guardar los datos leidos
-file =  open('./datosCrudos.csv', 'w', newline='')
-writer = csv.writer(file)
-writer.writerows(data)
-file.close()
+saveCsvExcel('datosCrudos', data)
 
-df = pd.read_csv("./datosCrudos.csv", encoding = 'unicode_escape')
-df.to_excel("datosCrudos.xlsx", sheet_name="Sheet1", index=False)
+# # DATOS PREGUNTAS Y TIEMPO REACCION
+saveCsvExcel('datosPreguntasReaccion', dataPreguntas)
 
-# DATOS PREGUNTAS Y TIEMPO REACCION
-file = open('./datosPreguntasReaccion.csv', 'w', newline='')
-writer = csv.writer(file)
-writer.writerows(dataPreguntas)
-file.close()
-
-df = pd.read_csv("./datosPreguntasReaccion.csv", encoding = 'unicode_escape')
-df.to_excel("datosPreguntasReaccion.xlsx", sheet_name="Sheet1", index=False)
-
+# DATOS POR INTENTO
+saveCsvExcel('datosIntentos', dataIntentos)
