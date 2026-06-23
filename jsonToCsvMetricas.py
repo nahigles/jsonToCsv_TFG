@@ -39,7 +39,7 @@ paradasRealizadas = 0
 erroresParadaTiempoExcedido = 0
 erroresTiempoExcedido = 0
 
-intentoTerminado = False
+inicioSesion = True
 
 def MCEvent(i, e, eValue, info): 
 
@@ -179,6 +179,7 @@ for name in nombresArchivos:
     numEvents = len(datos_JSON[name]) # Numero de eventos del json
 
     # ID del paciente y numero de sesion
+    inicioSesion = True
     txt = datos_JSON[name][0]["Eventos"][0]["Paciente y numero de sesion"]
     idSesion = txt.split(", ")
 
@@ -215,19 +216,26 @@ for name in nombresArchivos:
         preguntaCorrecta = infoEvent[7]
         
         if tipoEvento == 'Inicio juego':
-            # Escribir aqui si se puede
-            if intentoTerminado:
-                dataIntentos.append(dataFilIntento)
 
             if cambioNivel:
                 numIntento = 1
+          
             else:
                 numIntento += 1
+
+            if inicioSesion:
+                inicioSesion = False
+                dataFilIntentoPrev = [idNum, sesionNum, level, numIntento,timeStamp]
+                # Guardo previo
+            else:
+                tiempoDuracionIntento = calculateTime(dataFilIntentoPrev[4], timeStamp)
+                dataFilIntento = [dataFilIntentoPrev[0], dataFilIntentoPrev[1], dataFilIntentoPrev[2], dataFilIntentoPrev[3],dataFilIntentoPrev[4], timeStamp, tiempoDuracionIntento, 'Completado', 'Reglas planificacion cumplidas', '%Reglas respetadas ejecucion', 'Pasos planificados','Pasos ejecutados','Errores ejecucion','Num dormir planificado','Correctos dormir', 'Errores dormir','Num ubicacion planificado','Correctos ubicacion','Errores ubicacion', 'Paradas posibles','Paradas realizadas', 'Errores parada por tiempo excedido', 'Num errores por tiempo excedido']
+                dataIntentos.append(dataFilIntento)
+                # Guardo actual
+                dataFilIntentoPrev = [idNum, sesionNum, level, numIntento,timeStamp]
             
             # Guardo Intento
-            dataFilIntento = [idNum, sesionNum, level, numIntento,timeStamp, 'Tiempo final', 'Tiempo duracion', 'Completado', 'Reglas planificacion cumplidas', '%Reglas respetadas ejecucion', 'Pasos planificados','Pasos ejecutados','Errores ejecucion','Num dormir planificado','Correctos dormir', 'Errores dormir','Num ubicacion planificado','Correctos ubicacion','Errores ubicacion', 'Paradas posibles','Paradas realizadas', 'Errores parada por tiempo excedido', 'Num errores por tiempo excedido']
             #dataIntentos.append(dataFilIntento)
-            # Guardo datos para anyadir a dataIntento
 
         # Guardo datos crudos de los eventos
         dataFil = [idNum, sesionNum,level, numIntento, date, timeStamp, tipoEvento]
@@ -263,9 +271,9 @@ for name in nombresArchivos:
 
 
         # Guardo datos del intento
-        tiempoDuracionIntento = calculateTime(dataFilIntento[4], timeStamp)
-        dataFilIntento = [dataFilIntento[0], dataFilIntento[1], dataFilIntento[2], dataFilIntento[3],dataFilIntento[4], timeStamp, tiempoDuracionIntento, 'Complet', 'Reg plan cumpl', '%Reglas resp ej', 'Planificados','Pejecutados','Err ej','N dormir plan','Corrct dormir', 'Err dormir','N ubi plan','Corrct ubicacion','Errores ubicacion', 'Paradas posibles','Paradas realizadas', 'Errores parada por tiempo excedido', 'Num errores por tiempo excedido']
-        dataIntentos.append(dataFilIntento)
+        # tiempoDuracionIntento = calculateTime(dataFilIntento[4], timeStamp)
+        # dataFilIntento = [dataFilIntento[0], dataFilIntento[1], dataFilIntento[2], dataFilIntento[3],dataFilIntento[4], timeStamp, tiempoDuracionIntento, 'Complet', 'Reg plan cumpl', '%Reglas resp ej', 'Planificados','Pejecutados','Err ej','N dormir plan','Corrct dormir', 'Err dormir','N ubi plan','Corrct ubicacion','Errores ubicacion', 'Paradas posibles','Paradas realizadas', 'Errores parada por tiempo excedido', 'Num errores por tiempo excedido']
+        # dataIntentos.append(dataFilIntento)
 
         # Reinicio tipo pregunta y preguntacorrecta
         tipoPregunta = '-'
