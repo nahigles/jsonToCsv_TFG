@@ -22,9 +22,7 @@ tiempoExcedido = False
 tiempoInicioIntento = ''
 tiempoFinalIntento = ''
 tiempoDuracionIntento = ''
-completado = False
 reglasPlanificacionCumplidas = False
-reglasEjecucionCumplidas = 100
 numPasosPlanificados = 0
 numPasosEjecutados = 0
 numErroresEjecucion = 0
@@ -63,6 +61,7 @@ def MCEvent(i, e, eValue, info):
     global paradasRealizadas
     global erroresParadaTiempoExcedido
     global erroresTiempoExcedido
+    global reglasPlanificacionCumplidas
 
     if e == "Paciente y numero de sesion":
         tipoEvento = 'Paciente y número de sesion guardado'
@@ -141,9 +140,11 @@ def MCEvent(i, e, eValue, info):
 
     elif e == "Se cumplen las reglas":
         tipoEvento = 'Reglas cumplidas'
+        reglasPlanificacionCumplidas = True
 
     elif e == "Se incumplen las reglas":
         tipoEvento = 'Reglas incumplidas'
+        reglasPlanificacionCumplidas = False
     
     elif e == "Acabado":
         tipoEvento = 'Acabado'
@@ -259,9 +260,21 @@ for name in nombresArchivos:
                 erroresDormir = numDormirPlanificado - correctosDormir
                 numErroresEjecucion = erroresDormir + erroresUbicacion
 
+                # Porcentaje de reglas cumplidas
+                porcentajeReglasCumplidasEjecucion = 100
+
+                if erroresDormir > 0:
+                    porcentajeReglasCumplidasEjecucion -= 25
+                if erroresParadaTiempoExcedido  > 0:
+                    porcentajeReglasCumplidasEjecucion -= 25
+                if erroresUbicacion  > 0:
+                    porcentajeReglasCumplidasEjecucion -= 25
+
+
+                completado = porcentajeReglasCumplidasEjecucion == 100 and reglasPlanificacionCumplidas
 
                 # Guardo intento
-                dataFilIntento = [dataFilIntentoPrev[0], dataFilIntentoPrev[1], dataFilIntentoPrev[2], dataFilIntentoPrev[3],dataFilIntentoPrev[4], timeStamp, tiempoDuracionIntento, 'Completado', 'Reglas planificacion cumplidas', '%Reglas respetadas ejecucion', numPasosPlanificados, numPasosEjecutados, numErroresEjecucion, numDormirPlanificado, correctosDormir, erroresDormir,numUbicacionPlanificado,correctosUbicacion, erroresUbicacion, paradasPosibles, paradasRealizadas, erroresParadaTiempoExcedido, erroresTiempoExcedido]
+                dataFilIntento = [dataFilIntentoPrev[0], dataFilIntentoPrev[1], dataFilIntentoPrev[2], dataFilIntentoPrev[3],dataFilIntentoPrev[4], timeStamp, tiempoDuracionIntento, completado, reglasPlanificacionCumplidas, porcentajeReglasCumplidasEjecucion, numPasosPlanificados, numPasosEjecutados, numErroresEjecucion, numDormirPlanificado, correctosDormir, erroresDormir,numUbicacionPlanificado,correctosUbicacion, erroresUbicacion, paradasPosibles, paradasRealizadas, erroresParadaTiempoExcedido, erroresTiempoExcedido]
                 dataIntentos.append(dataFilIntento)
 
                 # Guardo actual
@@ -323,3 +336,7 @@ saveCsvExcel('datosPreguntasReaccion', dataPreguntas)
 
 # DATOS POR INTENTO
 saveCsvExcel('datosIntentos', dataIntentos)
+
+# DATOS POR NIVEL
+
+# DATOS POR SESION
