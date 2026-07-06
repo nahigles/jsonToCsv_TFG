@@ -39,6 +39,22 @@ erroresTiempoExcedido = 0
 
 inicioSesion = True
 
+# Datos nivel
+completadoNivel = False
+numPasosPlanificadosNivel = 0
+numPasosEjecutadosNivel = 0
+numErroresEjecucionNivel = 0
+numDormirPlanificadoNivel = 0
+correctosDormirNivel = 0
+erroresDormirNivel = 0
+numUbicacionPlanificadoNivel = 0
+correctosUbicacionNivel = 0
+erroresUbicacionNivel = 0
+paradasPosiblesNivel = 0
+paradasRealizadasNivel = 0
+erroresParadaTiempoExcedidoNivel = 0
+erroresTiempoExcedidoNivel = 0
+
 def MCEvent(i, e, eValue, info): 
 
     tipoEvento = info[0]
@@ -192,6 +208,7 @@ nArchivos = len(nombresArchivos)
 data = [['ID','Sesion', 'Nivel', 'Intento', 'Fecha', 'Tiempo', 'Evento']]
 dataPreguntas = [['ID','Sesion', 'Nivel', 'Intento', 'Tipo', 'Tiempo inicio', 'Tiempo respuesta', 'Tiempo reaccion(s)', 'Respuesta']]
 dataIntentos = [['ID','Sesion', 'Nivel', 'Intento','Tiempo inicio', 'Tiempo final', 'Tiempo duracion', 'Completado', 'Reglas planificacion cumplidas', '%Reglas respetadas ejecucion', 'Pasos planificados','Pasos ejecutados','Errores ejecucion','Num dormir planificado','Correctos dormir', 'Errores dormir','Num ubicacion planificado','Correctos ubicacion','Errores ubicacion', 'Paradas posibles','Paradas realizadas', 'Errores parada por tiempo excedido', 'Num errores por tiempo excedido']]
+dataNiveles = [['ID','Sesion', 'Nivel','Tiempo inicio', 'Tiempo final', 'Tiempo duracion', 'Completado', 'Pasos planificados','Pasos ejecutados','Errores ejecucion','Num dormir planificado','Correctos dormir', 'Errores dormir','Num ubicacion planificado','Correctos ubicacion','Errores ubicacion', 'Paradas posibles','Paradas realizadas', 'Errores parada por tiempo excedido', 'Num errores por tiempo excedido']]
 
 for name in nombresArchivos:
 
@@ -251,14 +268,32 @@ for name in nombresArchivos:
                 inicioSesion = False
                 # Guardo previo
                 dataFilIntentoPrev = [idNum, sesionNum, level, numIntento,timeStamp]
+                tiempoIniNivel = timeStamp
             else:
-                # Calculos
+
+                # INTENTOS
+                # Calculos intento
                 numUbicacionPlanificado = correctosUbicacion + erroresUbicacion
                 tiempoDuracionIntento = calculateTime(dataFilIntentoPrev[4], timeStamp)
                 numPasosPlanificados = numDormirPlanificado + numUbicacionPlanificado
                 numPasosEjecutados = correctosDormir + correctosUbicacion
                 erroresDormir = numDormirPlanificado - correctosDormir
                 numErroresEjecucion = erroresDormir + erroresUbicacion
+
+                # Calculos nivel
+                numPasosPlanificadosNivel += numPasosPlanificados
+                numPasosEjecutadosNivel += numPasosEjecutados
+                numErroresEjecucionNivel += numErroresEjecucion
+                numDormirPlanificadoNivel += numDormirPlanificado
+                correctosDormirNivel += correctosDormir
+                erroresDormirNivel += erroresDormir
+                numUbicacionPlanificadoNivel += numUbicacionPlanificado
+                correctosUbicacionNivel += correctosUbicacion
+                erroresUbicacionNivel += erroresUbicacion
+                paradasPosiblesNivel += paradasPosibles
+                paradasRealizadasNivel += paradasRealizadas
+                erroresParadaTiempoExcedidoNivel += erroresParadaTiempoExcedido
+                erroresTiempoExcedidoNivel += erroresTiempoExcedido
 
                 # Porcentaje de reglas cumplidas
                 porcentajeReglasCumplidasEjecucion = 100
@@ -272,7 +307,35 @@ for name in nombresArchivos:
 
 
                 completado = porcentajeReglasCumplidasEjecucion == 100 and reglasPlanificacionCumplidas
+                completadoNivel = completado or completadoNivel
+            
+                # NIVELES
+                if cambioNivel or i == (numEvents - 1):
 
+                    # Guardo nivel
+                    duracionNivel = calculateTime(tiempoIniNivel, timeStamp)
+                    dataFilNivel = [dataFilIntentoPrev[0], dataFilIntentoPrev[1], dataFilIntentoPrev[2],tiempoIniNivel, timeStamp, duracionNivel, completadoNivel, numPasosPlanificadosNivel, numPasosEjecutadosNivel, numErroresEjecucionNivel, numDormirPlanificadoNivel, correctosDormirNivel, erroresDormirNivel, numUbicacionPlanificadoNivel, correctosUbicacionNivel, erroresUbicacionNivel, paradasPosiblesNivel, paradasRealizadasNivel, erroresParadaTiempoExcedidoNivel, erroresTiempoExcedidoNivel]
+                    dataNiveles.append(dataFilNivel)
+                    tiempoIniNivel = timeStamp
+
+                    # Restablezco contadores
+                    completadoNivel = False
+
+                    numPasosPlanificadosNivel = 0
+                    numPasosEjecutadosNivel = 0
+                    numErroresEjecucionNivel = 0
+                    numDormirPlanificadoNivel = 0
+                    correctosDormirNivel = 0
+                    erroresDormirNivel = 0
+                    numUbicacionPlanificadoNivel = 0
+                    correctosUbicacionNivel = 0
+                    erroresUbicacionNivel = 0
+                    paradasPosiblesNivel = 0
+                    paradasRealizadasNivel = 0
+                    erroresParadaTiempoExcedidoNivel = 0
+                    erroresTiempoExcedidoNivel = 0
+
+                # INTENTOS
                 # Guardo intento
                 dataFilIntento = [dataFilIntentoPrev[0], dataFilIntentoPrev[1], dataFilIntentoPrev[2], dataFilIntentoPrev[3],dataFilIntentoPrev[4], timeStamp, tiempoDuracionIntento, completado, reglasPlanificacionCumplidas, porcentajeReglasCumplidasEjecucion, numPasosPlanificados, numPasosEjecutados, numErroresEjecucion, numDormirPlanificado, correctosDormir, erroresDormir,numUbicacionPlanificado,correctosUbicacion, erroresUbicacion, paradasPosibles, paradasRealizadas, erroresParadaTiempoExcedido, erroresTiempoExcedido]
                 dataIntentos.append(dataFilIntento)
@@ -338,5 +401,6 @@ saveCsvExcel('datosPreguntasReaccion', dataPreguntas)
 saveCsvExcel('datosIntentos', dataIntentos)
 
 # DATOS POR NIVEL
+saveCsvExcel('datosNiveles', dataNiveles)
 
 # DATOS POR SESION
