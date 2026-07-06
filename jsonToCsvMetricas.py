@@ -208,7 +208,7 @@ nArchivos = len(nombresArchivos)
 data = [['ID','Sesion', 'Nivel', 'Intento', 'Fecha', 'Tiempo', 'Evento']]
 dataPreguntas = [['ID','Sesion', 'Nivel', 'Intento', 'Tipo', 'Tiempo inicio', 'Tiempo respuesta', 'Tiempo reaccion(s)', 'Respuesta']]
 dataIntentos = [['ID','Sesion', 'Nivel', 'Intento','Tiempo inicio', 'Tiempo final', 'Tiempo duracion', 'Completado', 'Reglas planificacion cumplidas', '%Reglas respetadas ejecucion', 'Pasos planificados','Pasos ejecutados','Errores ejecucion','Num dormir planificado','Correctos dormir', 'Errores dormir','Num ubicacion planificado','Correctos ubicacion','Errores ubicacion', 'Paradas posibles','Paradas realizadas', 'Errores parada por tiempo excedido', 'Num errores por tiempo excedido']]
-dataNiveles = [['ID','Sesion', 'Nivel','Tiempo inicio', 'Tiempo final', 'Tiempo duracion', 'Completado', 'Pasos planificados','Pasos ejecutados','Errores ejecucion','Num dormir planificado','Correctos dormir', 'Errores dormir','Num ubicacion planificado','Correctos ubicacion','Errores ubicacion', 'Paradas posibles','Paradas realizadas', 'Errores parada por tiempo excedido', 'Num errores por tiempo excedido']]
+dataNiveles = [['ID','Sesion', 'Nivel', 'Num intentos','Tiempo inicio', 'Tiempo final', 'Tiempo duracion', 'Completado', 'Pasos planificados','Pasos ejecutados','Errores ejecucion','Num dormir planificado','Correctos dormir', 'Errores dormir','Num ubicacion planificado','Correctos ubicacion','Errores ubicacion', 'Paradas posibles','Paradas realizadas', 'Errores parada por tiempo excedido', 'Num errores por tiempo excedido']]
 
 for name in nombresArchivos:
 
@@ -314,7 +314,7 @@ for name in nombresArchivos:
 
                     # Guardo nivel
                     duracionNivel = calculateTime(tiempoIniNivel, timeStamp)
-                    dataFilNivel = [dataFilIntentoPrev[0], dataFilIntentoPrev[1], dataFilIntentoPrev[2],tiempoIniNivel, timeStamp, duracionNivel, completadoNivel, numPasosPlanificadosNivel, numPasosEjecutadosNivel, numErroresEjecucionNivel, numDormirPlanificadoNivel, correctosDormirNivel, erroresDormirNivel, numUbicacionPlanificadoNivel, correctosUbicacionNivel, erroresUbicacionNivel, paradasPosiblesNivel, paradasRealizadasNivel, erroresParadaTiempoExcedidoNivel, erroresTiempoExcedidoNivel]
+                    dataFilNivel = [dataFilIntentoPrev[0], dataFilIntentoPrev[1], dataFilIntentoPrev[2], dataFilIntentoPrev[3],tiempoIniNivel, timeStamp, duracionNivel, completadoNivel, numPasosPlanificadosNivel, numPasosEjecutadosNivel, numErroresEjecucionNivel, numDormirPlanificadoNivel, correctosDormirNivel, erroresDormirNivel, numUbicacionPlanificadoNivel, correctosUbicacionNivel, erroresUbicacionNivel, paradasPosiblesNivel, paradasRealizadasNivel, erroresParadaTiempoExcedidoNivel, erroresTiempoExcedidoNivel]
                     dataNiveles.append(dataFilNivel)
                     tiempoIniNivel = timeStamp
 
