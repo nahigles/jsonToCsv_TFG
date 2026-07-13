@@ -215,6 +215,12 @@ def saveCsvExcel(fileName, infoToSave):
     df = pd.read_csv(fileName + ".csv", encoding = 'unicode_escape')
     df.to_excel(fileName + ".xlsx", sheet_name="Sheet1", index=False)
 
+def corr(fileName):
+    df = pd.read_excel('{0}.xlsx'.format(fileName))
+    df.drop(columns=["ID"])
+    print(df.corr())
+
+
 
 ruta =  "./Mision Colombia/"
 
@@ -456,14 +462,18 @@ for name in nombresArchivos:
 # DATOS CRUDOS
 saveCsvExcel('datosCrudos', data)
 
-# # DATOS PREGUNTAS Y TIEMPO REACCION
+# DATOS PREGUNTAS Y TIEMPO REACCION
 saveCsvExcel('datosPreguntasReaccion', dataPreguntas)
+corr('datosPreguntasReaccion')
 
 # DATOS POR INTENTO
 saveCsvExcel('datosIntentos', dataIntentos)
+corr('datosIntentos')
 
 # DATOS POR NIVEL
 saveCsvExcel('datosNiveles', dataNiveles)
+corr('datosNiveles')
 
 # DATOS POR SESION
 saveCsvExcel('datosSesiones', dataSesiones)
+corr('datosSesiones')
