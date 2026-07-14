@@ -2,6 +2,9 @@ import csv
 import json
 import os
 import pandas as pd
+import numpy as np
+from scipy.stats import pearsonr
+
 
 # Datos en crudo
 tipoEvento = '-'
@@ -215,10 +218,79 @@ def saveCsvExcel(fileName, infoToSave):
     df = pd.read_csv(fileName + ".csv", encoding = 'unicode_escape')
     df.to_excel(fileName + ".xlsx", sheet_name="Sheet1", index=False)
 
-def corr(fileName):
+def cleanDataSesion(df):
+    df = df.drop(columns=["Tiempo inicio", "Tiempo final"])
+    return df
+
+def cleanDataNivel(df):
+    df = cleanDataSesion(df)
+    df = df.drop(columns=["Completado"])
+    return df
+
+def cleanDataIntento(df):
+    df = cleanDataNivel(df)
+    df = df.drop(columns=["Reglas planificacion cumplidas"])
+    return df
+
+def cleanDataTiempoReacciones(df):
+    df = df.drop(columns=["Tipo","Tiempo inicio", "Tiempo respuesta", "Respuesta"])
+    df = df.dropna(axis = 0)
+    df = df[df['Tiempo reaccion(s)'] != 'Tiempo excedido']
+    return df
+
+def calcular_p_valores(df):      
+    # 1. Nos aseguramos de quedarnos solo con columnas numéricas para evitar errores
+    df_numerico = df.select_dtypes(include=[np.number])
+    columnas = df_numerico.columns
+    m = len(columnas)
+    
+    # 2. Inicializamos la matriz de p-valores
+    p_valores = np.zeros((m, m))
+    cor_valores = np.zeros((m, m))
+    
+    # 3. Doble bucle para calcular el p-valor entre cada par de variables
+    for i in range(m):
+        for j in range(m):
+            if i == j:
+                # La correlación de una variable consigo misma siempre es 1 (p-valor = 0)
+                p_valores[i, j] = 0.0
+                cor_valores[i, j] = 1.0
+            else:
+                # Calculamos pearsonr. Es importante que no haya valores nulos (NaN)
+                # .dropna() elimina filas con NaN en esa pareja para evitar que devuelva NaN
+                df_limpio = df_numerico[[columnas[i], columnas[j]]].dropna()
+                
+                if len(df_limpio) > 1:  # Se necesitan al menos 2 puntos para calcular la correlación
+                    cor_val, p_val = pearsonr(df_limpio[columnas[i]], df_limpio[columnas[j]])
+                    p_valores[i, j] = p_val
+                    cor_valores[i, j] = cor_val
+                else:
+                    p_valores[i, j] = np.nan
+                    cor_valores[i, j] = np.nan
+
+    return pd.DataFrame(cor_valores, columns=columnas, index=columnas), pd.DataFrame(p_valores, columns=columnas, index=columnas)
+
+def corr(fileName, type):
     df = pd.read_excel('{0}.xlsx'.format(fileName))
-    df.drop(columns=["ID"])
-    print(df.corr())
+    df = df.drop(columns=["ID"])
+    if type == 1:
+        df = cleanDataTiempoReacciones(df)
+    elif type == 2:
+        df = cleanDataIntento(df)
+    elif type == 3:
+        df = cleanDataNivel(df)
+    elif type == 4:
+        df = cleanDataSesion(df)
+
+    # Obtener la matriz de p-values y correlacion
+    matriz_cor_valores, matriz_p_valores = calcular_p_valores(df)
+    print(matriz_p_valores)
+    matriz_p_valores.to_excel(str(type) + "pvalues.xlsx")
+    matriz_cor_valores.to_excel(str(type) + "corvalues.xlsx")
+
+    # df.to_excel(str(type) + "output.xlsx")
+    #print(df.corr())
+
 
 
 
@@ -459,21 +531,35 @@ for name in nombresArchivos:
     numNivelesTotales = 0
     numNivelesCompletados = 0
        
-# DATOS CRUDOS
-saveCsvExcel('datosCrudos', data)
 
-# DATOS PREGUNTAS Y TIEMPO REACCION
-saveCsvExcel('datosPreguntasReaccion', dataPreguntas)
-corr('datosPreguntasReaccion')
+# Escribo datos finales
+writeDatas = False
+writeCorrelacion = True
 
-# DATOS POR INTENTO
-saveCsvExcel('datosIntentos', dataIntentos)
-corr('datosIntentos')
+# DATOS CRUDOS 0
+if writeDatas:
+    saveCsvExcel('datosCrudos', data)
 
-# DATOS POR NIVEL
-saveCsvExcel('datosNiveles', dataNiveles)
-corr('datosNiveles')
+# DATOS PREGUNTAS Y TIEMPO REACCION 1
+if writeDatas:
+    saveCsvExcel('datosPreguntasReaccion', dataPreguntas)
+if writeCorrelacion:
+    corr('datosPreguntasReaccion',1)
 
-# DATOS POR SESION
-saveCsvExcel('datosSesiones', dataSesiones)
-corr('datosSesiones')
+# DATOS POR INTENTO 2
+if writeDatas:
+    saveCsvExcel('datosIntentos', dataIntentos)
+if writeCorrelacion:
+    corr('datosIntentos',2)
+
+# DATOS POR NIVEL 3
+if writeDatas:
+    saveCsvExcel('datosNiveles', dataNiveles)
+if writeCorrelacion:
+    corr('datosNiveles', 3)
+
+# DATOS POR SESION 4
+if writeDatas:
+    saveCsvExcel('datosSesiones', dataSesiones)
+if writeCorrelacion:
+    corr('datosSesiones', 4)
