@@ -533,33 +533,39 @@ for name in nombresArchivos:
        
 
 # Escribo datos finales
-writeDatas = False
+writeDatas = True
 writeCorrelacion = True
+writeType = 0b0000
+writeDatosCrudos = False
 
 # DATOS CRUDOS 0
-if writeDatas:
+if writeDatas and writeDatosCrudos:
     saveCsvExcel('datosCrudos', data)
 
 # DATOS PREGUNTAS Y TIEMPO REACCION 1
-if writeDatas:
-    saveCsvExcel('datosPreguntasReaccion', dataPreguntas)
-if writeCorrelacion:
-    corr('datosPreguntasReaccion',1)
+if writeType & 0b1000:
+    if writeDatas:
+        saveCsvExcel('datosPreguntasReaccion', dataPreguntas)
+    if writeCorrelacion:
+        corr('datosPreguntasReaccion',1)
 
 # DATOS POR INTENTO 2
-if writeDatas:
-    saveCsvExcel('datosIntentos', dataIntentos)
-if writeCorrelacion:
-    corr('datosIntentos',2)
+if writeType & 0b0100:
+    if writeDatas:
+        saveCsvExcel('datosIntentos', dataIntentos)
+    if writeCorrelacion:
+        corr('datosIntentos',2)
 
 # DATOS POR NIVEL 3
-if writeDatas:
-    saveCsvExcel('datosNiveles', dataNiveles)
-if writeCorrelacion:
-    corr('datosNiveles', 3)
+if writeType & 0b0010:
+    if writeDatas:
+        saveCsvExcel('datosNiveles', dataNiveles)
+    if writeCorrelacion:
+        corr('datosNiveles', 3)
 
 # DATOS POR SESION 4
-if writeDatas:
-    saveCsvExcel('datosSesiones', dataSesiones)
-if writeCorrelacion:
-    corr('datosSesiones', 4)
+if writeType & 0b0001:
+    if writeDatas:
+        saveCsvExcel('datosSesiones', dataSesiones)
+    if writeCorrelacion:
+        corr('datosSesiones', 4)
