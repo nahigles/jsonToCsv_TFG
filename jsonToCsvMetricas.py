@@ -20,6 +20,7 @@ tiempoSolicitudDormir = '-'
 writeSleep = False
 writeStop = False
 tiempoExcedido = False
+borrarTiemposInicio = False
 
 # Datos por intento
 tiempoInicioIntento = ''
@@ -470,6 +471,9 @@ for name in nombresArchivos:
                 paradasPosibles = 0
                 erroresParadaTiempoExcedido = 0
                 erroresTiempoExcedido = 0
+
+                borrarTiemposInicio = True
+
             
 
         # Guardo datos crudos de los eventos
@@ -504,6 +508,10 @@ for name in nombresArchivos:
                     tiempoSolicitudParada = '-'
                     dataPreguntas.append(dataFil)      
 
+        if borrarTiemposInicio:
+            tiempoSolicitudParada = '-'
+            tiempoSolicitudDormir = '-'
+            borrarTiemposInicio = False
 
         # Reinicio tipo pregunta y preguntacorrecta
         tipoPregunta = '-'
@@ -530,12 +538,15 @@ for name in nombresArchivos:
     numIntentosTotales = 0
     numNivelesTotales = 0
     numNivelesCompletados = 0
+
+    tiempoSolicitudParada = '-'
+    tiempoSolicitudDormir = '-'
        
 
 # Escribo datos finales
 writeDatas = True
 writeCorrelacion = True
-writeType = 0b0000
+writeType = 0b0111
 writeDatosCrudos = False
 
 # DATOS CRUDOS 0

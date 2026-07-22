@@ -125,7 +125,7 @@ ID,Sesion,Nivel,Intento,Tipo,Tiempo inicio,Tiempo respuesta,Tiempo reaccion(s),R
 11,3,1,2,Parada,14:17:24.298,14:17:25.917,1.619,-
 11,3,1,2,Parada,14:17:32.131,14:17:34.098,1.967,-
 11,3,1,2,Dormir,14:17:37.197,14:17:38.331,1.134,Correcto
-11,3,1,3,Parada,14:17:44.930,14:18:36.653,51.723,-
+11,3,1,3,Parada,14:18:35.700,14:18:36.653,0.953,-
 11,3,1,3,Parada,14:18:42.866,14:18:43.980,1.114,-
 11,3,1,3,Dormir,14:18:45.500,14:18:46.734,1.234,Correcto
 11,3,1,3,Parada,14:18:56.466,14:18:57.500,1.034,-
@@ -933,7 +933,7 @@ ID,Sesion,Nivel,Intento,Tipo,Tiempo inicio,Tiempo respuesta,Tiempo reaccion(s),R
 23,1,1,9,Parada,14:46:53.236,14:46:55.237,2.001,-
 23,1,1,9,Ubicacion,14:46:58.535,,,Correcto
 23,1,1,9,Ubicacion,14:47:48.528,,,Correcto
-24,1,1,1,Parada,14:50:51.851,15:12:03.577,1271.726,-
+24,1,1,1,Parada,15:11:56.541,15:12:03.577,7.036,-
 24,1,1,2,Parada,15:14:42.196,15:14:44.214,2.018,-
 24,1,1,3,Parada,15:17:27.159,,Tiempo excedido,Erroneo
 24,1,2,1,Parada,15:21:04.271,,Tiempo excedido,Erroneo
@@ -1761,7 +1761,7 @@ ID,Sesion,Nivel,Intento,Tipo,Tiempo inicio,Tiempo respuesta,Tiempo reaccion(s),R
 32,3,2,1,Parada,14:20:31.196,14:20:33.782,2.586,-
 32,3,2,1,Dormir,14:20:52.528,14:20:54.129,1.601,Correcto
 32,3,2,1,Ubicacion,14:20:59.161,,,Erroneo
-32,3,2,2,Parada,14:21:00.727,14:21:54.550,53.823,-
+32,3,2,2,Parada,14:21:51.864,14:21:54.550,2.686,-
 32,3,2,2,Dormir,14:22:10.163,14:22:11.582,1.419,Correcto
 32,3,2,2,Dormir,14:22:18.163,14:22:18.997,0.834,Correcto
 32,3,2,2,Parada,14:22:25.596,14:22:27.762,2.166,-
@@ -2261,7 +2261,7 @@ ID,Sesion,Nivel,Intento,Tipo,Tiempo inicio,Tiempo respuesta,Tiempo reaccion(s),R
 47,3,2,4,Ubicacion,15:14:13.800,,,Correcto
 47,3,2,4,Dormir,15:14:13.600,,Tiempo excedido,Erroneo
 47,3,2,4,Dormir,15:14:28.064,15:14:30.933,2.869,Correcto
-47,3,2,5,Parada,15:14:37.531,15:16:42.772,125.241,-
+47,3,2,5,Parada,15:16:35.553,15:16:42.772,7.219,-
 47,3,2,5,Parada,15:17:10.918,15:17:14.851,3.933,-
 47,3,2,6,Parada,15:18:13.360,15:18:15.812,2.452,-
 47,3,2,6,Parada,15:18:43.891,15:18:48.875,4.984,-
