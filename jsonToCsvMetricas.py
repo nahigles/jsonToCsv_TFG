@@ -271,7 +271,7 @@ def calcular_p_valores(df):
 
     return pd.DataFrame(cor_valores, columns=columnas, index=columnas), pd.DataFrame(p_valores, columns=columnas, index=columnas)
 
-def corr(fileName, type):
+def corr(fileName, type, sinZeroPlan):
     df = pd.read_excel('{0}.xlsx'.format(fileName))
     df = df.drop(columns=["ID"])
     if type == 1:
@@ -283,14 +283,21 @@ def corr(fileName, type):
     elif type == 4:
         df = cleanDataSesion(df)
 
+    if sinZeroPlan:
+        # 1. Obtener los índices de las filas donde el valor es 0
+        filas_a_eliminar = df[df["columna_ejemplo"] == 0].index
+
+        # 2. Eliminar esas filas
+        df_filtrado = df.drop(filas_a_eliminar)
+
+        print(df_filtrado)
+
     # Obtener la matriz de p-values y correlacion
     matriz_cor_valores, matriz_p_valores = calcular_p_valores(df)
-    print(matriz_p_valores)
-    matriz_p_valores.to_excel(str(type) + "pvalues.xlsx")
-    matriz_cor_valores.to_excel(str(type) + "corvalues.xlsx")
+    matriz_p_valores.to_excel(fileName + "PValues.xlsx")
+    matriz_cor_valores.to_excel(fileName + "CorValues.xlsx")
 
-    # df.to_excel(str(type) + "output.xlsx")
-    #print(df.corr())
+    df.to_excel(fileName + "Output.xlsx")
 
 
 
@@ -544,9 +551,9 @@ for name in nombresArchivos:
        
 
 # Escribo datos finales
-writeDatas = True
+writeDatas = False
 writeCorrelacion = True
-writeType = 0b0111
+writeType = 0b1111
 writeDatosCrudos = False
 
 # DATOS CRUDOS 0
