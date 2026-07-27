@@ -310,9 +310,9 @@ nArchivos = len(nombresArchivos)
 # Datos con los titulos de cada columna
 data = [['ID','Sesion', 'Nivel', 'Intento', 'Fecha', 'Tiempo', 'Evento']]
 dataPreguntas = [['ID','Sesion', 'Nivel', 'Intento', 'Tipo', 'Tiempo inicio', 'Tiempo respuesta', 'Tiempo reaccion(s)', 'Respuesta']]
-dataIntentos = [['ID','Sesion', 'Nivel', 'Intento','Tiempo inicio', 'Tiempo final', 'Tiempo duracion', 'Completado', 'Reglas planificacion cumplidas', '%Reglas respetadas ejecucion', 'Pasos planificados','Pasos ejecutados','Errores ejecucion','Num dormir planificado','Correctos dormir', 'Errores dormir','Num ubicacion planificado','Correctos ubicacion','Errores ubicacion', 'Paradas posibles','Paradas realizadas', 'Errores parada por tiempo excedido', 'Num errores por tiempo excedido']]
-dataNiveles = [['ID','Sesion', 'Nivel', 'Num intentos','Tiempo inicio', 'Tiempo final', 'Tiempo duracion', 'Completado', 'Pasos planificados','Pasos ejecutados','Errores ejecucion','Num dormir planificado','Correctos dormir', 'Errores dormir','Num ubicacion planificado','Correctos ubicacion','Errores ubicacion', 'Paradas posibles','Paradas realizadas', 'Errores parada por tiempo excedido', 'Num errores por tiempo excedido']]
-dataSesiones = [['ID','Sesion', 'Num niveles', 'Num intentos', 'Completados','Tiempo inicio', 'Tiempo final', 'Tiempo duracion', 'Pasos planificados','Pasos ejecutados','Errores ejecucion','Num dormir planificado','Correctos dormir', 'Errores dormir','Num ubicacion planificado','Correctos ubicacion','Errores ubicacion', 'Paradas posibles','Paradas realizadas', 'Errores parada por tiempo excedido', 'Num errores por tiempo excedido']]
+dataIntentos = [['ID','Sesion', 'Nivel', 'Intento','Tiempo inicio', 'Tiempo final', 'Tiempo duracion', 'Completado', 'Reglas planificacion cumplidas', '%Reglas respetadas ejecucion', 'Pasos planificados','Pasos ejecutados','Errores ejecucion','Num dormir planificado','Correctos dormir', 'Errores dormir','Num ubicacion planificado','Correctos ubicacion','Errores ubicacion', 'Paradas posibles','Paradas realizadas', 'Errores parada por tiempo excedido', 'Num errores por tiempo excedido', '% Aciertos', '% Mal']]
+dataNiveles = [['ID','Sesion', 'Nivel', 'Num intentos','Tiempo inicio', 'Tiempo final', 'Tiempo duracion', 'Completado', 'Pasos planificados','Pasos ejecutados','Errores ejecucion','Num dormir planificado','Correctos dormir', 'Errores dormir','Num ubicacion planificado','Correctos ubicacion','Errores ubicacion', 'Paradas posibles','Paradas realizadas', 'Errores parada por tiempo excedido', 'Num errores por tiempo excedido', '% Aciertos', '% Mal']]
+dataSesiones = [['ID','Sesion', 'Num niveles', 'Num intentos', 'Completados','Tiempo inicio', 'Tiempo final', 'Tiempo duracion', 'Pasos planificados','Pasos ejecutados','Errores ejecucion','Num dormir planificado','Correctos dormir', 'Errores dormir','Num ubicacion planificado','Correctos ubicacion','Errores ubicacion', 'Paradas posibles','Paradas realizadas', 'Errores parada por tiempo excedido', 'Num errores por tiempo excedido', '% Aciertos', '% Mal']]
 
 for name in nombresArchivos:
 
@@ -421,8 +421,15 @@ for name in nombresArchivos:
                 if cambioNivel or i == (numEvents - 1):
 
                     # Guardo nivel
+                    if numPasosPlanificadosNivel != 0:
+                        pAciertosNivel = numPasosEjecutadosNivel*100.0/numPasosPlanificadosNivel
+                        pErroneosNivel = 100 - pAciertosNivel
+                    else:
+                        pAciertosNivel = '0 planificado'
+                        pErroneosNivel = '0 planificado'
+
                     duracionNivel = calculateTime(tiempoIniNivel, timeStamp)
-                    dataFilNivel = [dataFilIntentoPrev[0], dataFilIntentoPrev[1], dataFilIntentoPrev[2], dataFilIntentoPrev[3],tiempoIniNivel, timeStamp, duracionNivel, completadoNivel, numPasosPlanificadosNivel, numPasosEjecutadosNivel, numErroresEjecucionNivel, numDormirPlanificadoNivel, correctosDormirNivel, erroresDormirNivel, numUbicacionPlanificadoNivel, correctosUbicacionNivel, erroresUbicacionNivel, paradasPosiblesNivel, paradasRealizadasNivel, erroresParadaTiempoExcedidoNivel, erroresTiempoExcedidoNivel]
+                    dataFilNivel = [dataFilIntentoPrev[0], dataFilIntentoPrev[1], dataFilIntentoPrev[2], dataFilIntentoPrev[3],tiempoIniNivel, timeStamp, duracionNivel, completadoNivel, numPasosPlanificadosNivel, numPasosEjecutadosNivel, numErroresEjecucionNivel, numDormirPlanificadoNivel, correctosDormirNivel, erroresDormirNivel, numUbicacionPlanificadoNivel, correctosUbicacionNivel, erroresUbicacionNivel, paradasPosiblesNivel, paradasRealizadasNivel, erroresParadaTiempoExcedidoNivel, erroresTiempoExcedidoNivel, pAciertosNivel, pErroneosNivel]
                     dataNiveles.append(dataFilNivel)
                     tiempoIniNivel = timeStamp
 
@@ -462,7 +469,13 @@ for name in nombresArchivos:
 
                 # INTENTOS
                 # Guardo intento
-                dataFilIntento = [dataFilIntentoPrev[0], dataFilIntentoPrev[1], dataFilIntentoPrev[2], dataFilIntentoPrev[3],dataFilIntentoPrev[4], timeStamp, tiempoDuracionIntento, completado, reglasPlanificacionCumplidas, porcentajeReglasCumplidasEjecucion, numPasosPlanificados, numPasosEjecutados, numErroresEjecucion, numDormirPlanificado, correctosDormir, erroresDormir,numUbicacionPlanificado,correctosUbicacion, erroresUbicacion, paradasPosibles, paradasRealizadas, erroresParadaTiempoExcedido, erroresTiempoExcedido]
+                if numPasosPlanificados != 0:
+                    pAciertosIntento = numPasosEjecutados*100.0/numPasosPlanificados
+                    pErroneosIntento = 100 - pAciertosIntento
+                else:
+                    pAciertosIntento = '0 planificado'
+                    pErroneosIntento = '0 planificado'
+                dataFilIntento = [dataFilIntentoPrev[0], dataFilIntentoPrev[1], dataFilIntentoPrev[2], dataFilIntentoPrev[3],dataFilIntentoPrev[4], timeStamp, tiempoDuracionIntento, completado, reglasPlanificacionCumplidas, porcentajeReglasCumplidasEjecucion, numPasosPlanificados, numPasosEjecutados, numErroresEjecucion, numDormirPlanificado, correctosDormir, erroresDormir,numUbicacionPlanificado,correctosUbicacion, erroresUbicacion, paradasPosibles, paradasRealizadas, erroresParadaTiempoExcedido, erroresTiempoExcedido, pAciertosIntento, pErroneosIntento]
                 dataIntentos.append(dataFilIntento)
 
                 # Guardo actual
@@ -524,8 +537,15 @@ for name in nombresArchivos:
         preguntaCorrecta = '-'
 
     # Guardo datos sesion
+    if numPasosPlanificadosSesion != 0:
+        pAciertosSesion = numPasosEjecutadosSesion*100.0/numPasosPlanificadosSesion
+        pErroneosSesion = 100 - pAciertosSesion
+    else:
+        pAciertosSesion = '0 planificado'
+        pErroneosSesion = '0 planificado'
+
     duracionSesion = calculateTime(tiempoInicioSesion, timeStamp)
-    dataFilSesion = [idNum, sesionNum, numNivelesTotales, numIntentosTotales, numNivelesCompletados, tiempoInicioSesion, timeStamp, duracionSesion, numPasosPlanificadosSesion, numPasosEjecutadosSesion, numErroresEjecucionSesion, numDormirPlanificadoSesion, correctosDormirSesion, erroresDormirSesion, numUbicacionPlanificadoSesion, correctosUbicacionSesion, erroresUbicacionSesion, paradasPosiblesSesion, paradasRealizadasSesion, erroresParadaTiempoExcedidoSesion, erroresTiempoExcedidoSesion]
+    dataFilSesion = [idNum, sesionNum, numNivelesTotales, numIntentosTotales, numNivelesCompletados, tiempoInicioSesion, timeStamp, duracionSesion, numPasosPlanificadosSesion, numPasosEjecutadosSesion, numErroresEjecucionSesion, numDormirPlanificadoSesion, correctosDormirSesion, erroresDormirSesion, numUbicacionPlanificadoSesion, correctosUbicacionSesion, erroresUbicacionSesion, paradasPosiblesSesion, paradasRealizadasSesion, erroresParadaTiempoExcedidoSesion, erroresTiempoExcedidoSesion, pAciertosSesion, pErroneosSesion]
     dataSesiones.append(dataFilSesion) 
 
     numPasosPlanificadosSesion = 0
@@ -550,8 +570,8 @@ for name in nombresArchivos:
        
 
 # Escribo datos finales
-writeDatas = False
-writeCorrelacion = True
+writeDatas = True
+writeCorrelacion = False
 writeType = 0b1111
 writeDatosCrudos = False
 
