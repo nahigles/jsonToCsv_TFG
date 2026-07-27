@@ -3448,14 +3448,4 @@
     "Tiempo": "2025-11-13 15:42:14.394",
     "Eventos": [
         { "Ubicacion bien enviada": "Ubicacion bien enviada" }]
-},
-{
-    "Tiempo": "2025-11-14 10:55:38.317",
-    "Eventos": [
-        { "Iniciando juego": "nivel 03" }]
-},
-{
-    "Tiempo": "2025-11-14 10:55:38.321",
-    "Eventos": [
-        { "Se incumplen las reglas": "No se cumplen las reglas" }]
 }]}

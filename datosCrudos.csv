@@ -13567,8 +13567,6 @@ ID,Sesion,Nivel,Intento,Fecha,Tiempo,Evento
 25,3,3,7,2025-11-13,15:42:00.292,Empieza a dormir
 25,3,3,7,2025-11-13,15:42:14.393,Ubicacion enviada
 25,3,3,7,2025-11-13,15:42:14.394,Ubicacion bien enviada
-25,3,3,8,2025-11-14,10:55:38.317,Inicio juego
-25,3,3,8,2025-11-14,10:55:38.321,Reglas incumplidas
 26,1,,,2025-10-30,14:57:14.599,Paciente y número de sesion guardado
 26,1,1,1,2025-10-30,14:57:14.600,Inicio juego
 26,1,1,1,2025-10-30,14:57:14.607,Reglas incumplidas

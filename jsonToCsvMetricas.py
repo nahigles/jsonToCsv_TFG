@@ -552,7 +552,7 @@ for name in nombresArchivos:
 # Escribo datos finales
 writeDatas = False
 writeCorrelacion = True
-writeType = 0b0111
+writeType = 0b1111
 writeDatosCrudos = False
 
 # DATOS CRUDOS 0
@@ -571,21 +571,21 @@ if writeType & 0b0100:
     if writeDatas:
         saveCsvExcel('datosIntentos', dataIntentos)
     if writeCorrelacion:
-        #corr('datosIntentos',2, False)
-        corr('datosIntentos',2, True)
+        corr('datosIntentos',2, False)
+        #corr('datosIntentos',2, True)
 
 # DATOS POR NIVEL 3
 if writeType & 0b0010:
     if writeDatas:
         saveCsvExcel('datosNiveles', dataNiveles)
     if writeCorrelacion:
-        #corr('datosNiveles', 3, False)
-        corr('datosNiveles', 3, True)
+        corr('datosNiveles', 3, False)
+        #corr('datosNiveles', 3, True)
 
 # DATOS POR SESION 4
 if writeType & 0b0001:
     if writeDatas:
         saveCsvExcel('datosSesiones', dataSesiones)
     if writeCorrelacion:
-        #corr('datosSesiones', 4, False)
-        corr('datosSesiones', 4, True)
+        corr('datosSesiones', 4, False)
+        #corr('datosSesiones', 4, True)
