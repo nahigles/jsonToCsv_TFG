@@ -26,6 +26,7 @@ borrarTiemposInicio = False
 tiempoInicioIntento = ''
 tiempoFinalIntento = ''
 tiempoDuracionIntento = ''
+tiempoEventoAnt = ''
 reglasPlanificacionCumplidas = False
 numPasosPlanificados = 0
 numPasosEjecutados = 0
@@ -283,14 +284,12 @@ def corr(fileName, type, sinZeroPlan):
     elif type == 4:
         df = cleanDataSesion(df)
 
-    if sinZeroPlan:
-        # 1. Obtener los índices de las filas donde el valor es 0
-        filas_a_eliminar = df[df["columna_ejemplo"] == 0].index
-
-        # 2. Eliminar esas filas
-        df_filtrado = df.drop(filas_a_eliminar)
-
-        print(df_filtrado)
+    if sinZeroPlan and type != 1:
+        dropFilas = df[df["Pasos planificados"] == 0].index
+        print(df)
+        df = df.drop(dropFilas)
+        print(df)
+        fileName = fileName + "Sin0"
 
     # Obtener la matriz de p-values y correlacion
     matriz_cor_valores, matriz_p_valores = calcular_p_valores(df)
@@ -553,7 +552,7 @@ for name in nombresArchivos:
 # Escribo datos finales
 writeDatas = False
 writeCorrelacion = True
-writeType = 0b1111
+writeType = 0b0111
 writeDatosCrudos = False
 
 # DATOS CRUDOS 0
@@ -565,25 +564,28 @@ if writeType & 0b1000:
     if writeDatas:
         saveCsvExcel('datosPreguntasReaccion', dataPreguntas)
     if writeCorrelacion:
-        corr('datosPreguntasReaccion',1)
+        corr('datosPreguntasReaccion',1,False)
 
 # DATOS POR INTENTO 2
 if writeType & 0b0100:
     if writeDatas:
         saveCsvExcel('datosIntentos', dataIntentos)
     if writeCorrelacion:
-        corr('datosIntentos',2)
+        #corr('datosIntentos',2, False)
+        corr('datosIntentos',2, True)
 
 # DATOS POR NIVEL 3
 if writeType & 0b0010:
     if writeDatas:
         saveCsvExcel('datosNiveles', dataNiveles)
     if writeCorrelacion:
-        corr('datosNiveles', 3)
+        #corr('datosNiveles', 3, False)
+        corr('datosNiveles', 3, True)
 
 # DATOS POR SESION 4
 if writeType & 0b0001:
     if writeDatas:
         saveCsvExcel('datosSesiones', dataSesiones)
     if writeCorrelacion:
-        corr('datosSesiones', 4)
+        #corr('datosSesiones', 4, False)
+        corr('datosSesiones', 4, True)
