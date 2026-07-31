@@ -222,6 +222,7 @@ def saveCsvExcel(fileName, infoToSave):
 
 def cleanDataSesion(df):
     df = df.drop(columns=["Tiempo inicio", "Tiempo final"])
+
     return df
 
 def cleanDataNivel(df):
@@ -289,13 +290,21 @@ def corr(fileName, type, sinZeroPlan):
         print(df)
         df = df.drop(dropFilas)
         print(df)
+        df["% Aciertos"] = df["% Aciertos"].astype(np.float64)
+        df["% Mal"] = df["% Mal"].astype(np.float64)
+
         fileName = fileName + "Sin0"
+
+    if type == 1:
+        df["Tiempo reaccion(s)"] = df["Tiempo reaccion(s)"].astype(np.float64)
+
+    print(df)
 
     # Obtener la matriz de p-values y correlacion
     matriz_cor_valores, matriz_p_valores = calcular_p_valores(df)
     matriz_p_valores.to_excel(fileName + "PValues.xlsx")
     matriz_cor_valores.to_excel(fileName + "CorValues.xlsx")
-
+    print(matriz_cor_valores)
     df.to_excel(fileName + "Output.xlsx")
 
 
