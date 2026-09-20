@@ -1,0 +1,20 @@
+{ "7_MisionColombia_2025-11-13_2.json": [
+{
+    "Tiempo": "2025-11-13 14:45:53.780",
+    "Eventos": [
+        { "Paciente y numero de sesion": "Paciente: 7, Numero sesion: 2" }]
+},
+{
+    "Tiempo": "2025-11-13 14:45:53.780",
+    "Eventos": [
+        { "Iniciando juego": "nivel 01" }]
+},
+{
+    "Tiempo": "2025-11-13 14:45:53.787",
+    "Eventos": [
+        { "Se incumplen las reglas": "No se cumplen las reglas" }]
+},
+{
+    "Tiempo": "2025-11-13 14:46:26.956" , 
+    "Eventos":  [
+        { "Acabado": "Acabado" }] } ]}
